@@ -48,122 +48,63 @@ body {
 }
 
 /* ==========================================================================
-   TOP APP HEADER & LIVE STATS
+   MINIMAL TOP NAVIGATION BAR (Ultra-Clean & Professional)
    ========================================================================== */
-.app-header {
+.minimal-nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(8, 9, 12, 0.92);
+  background: rgba(8, 9, 12, 0.90);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-subtle);
-  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 10px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
 }
 
-.app-header.minimized {
-  transform: translateY(-110%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.broker-badge {
+.nav-brand {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #11141C;
-  border: 1px solid rgba(255, 215, 0, 0.25);
-  padding: 6px 12px;
-  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s ease;
-}
-.broker-badge:hover {
-  border-color: rgba(255, 215, 0, 0.6);
-  background: #171B26;
 }
 
-.gold-icon {
-  font-size: 18px;
-}
-
-.broker-meta {
-  display: flex;
-  flex-direction: column;
-}
-
-.broker-pair {
+.nav-symbol {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 800;
-  font-size: 13px;
+  font-size: 13.5px;
   letter-spacing: 0.5px;
-  color: #FFD700;
-  line-height: 1.1;
-}
-
-.broker-name {
-  font-size: 10px;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-
-.header-semester-display {
-  display: flex;
-  align-items: center;
-}
-
-.semester-quick-badge {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  color: #38BDF8;
-  background: rgba(56, 189, 248, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  padding: 4px 12px;
-  border-radius: 20px;
-  letter-spacing: 0.3px;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.btn-icon-nav {
-  background: #121620;
-  border: 1px solid #1E293B;
-  border-radius: 8px;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #94A3B8;
-  font-size: 14px;
-  transition: all 0.2s ease;
-}
-.btn-icon-nav:hover {
-  background: #1E2638;
   color: #F8FAFC;
-  border-color: #38BDF8;
 }
 
-.btn-menu-drawer {
-  background: #141A28;
-  border: 1px solid #2B3B55;
+.nav-divider {
+  color: #334155;
+  font-size: 11px;
+}
+
+.nav-account {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #10B981;
+}
+
+.nav-badge {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748B;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.btn-menu {
+  background: #11151F;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
   width: 38px;
   height: 38px;
@@ -173,10 +114,9 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.btn-menu-drawer:hover {
-  background: #1E273D;
-  border-color: #00D2FF;
-  transform: translateY(-1px);
+.btn-menu:hover {
+  background: #1A2234;
+  border-color: #38BDF8;
 }
 
 /* CSS Hamburger Lines */
@@ -196,37 +136,8 @@ body {
   transition: all 0.2s ease;
 }
 
-/* Floating Restore Button when header is hidden */
-.floating-header-btn {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 990;
-  background: rgba(14, 19, 31, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 210, 255, 0.4);
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-  transition: all 0.2s ease;
-}
-.floating-header-btn:hover {
-  background: #1E273D;
-  border-color: #00D2FF;
-  transform: scale(1.05);
-}
-.floating-header-btn.hidden {
-  display: none;
-}
-
 /* ==========================================================================
-   SEMESTER CONTROLLER & TIMELINE STREAM
+   PURE CALENDAR STREAM (Immediate Full-Screen Grid)
    ========================================================================== */
 .calendar-stream {
   flex: 1;
@@ -236,24 +147,25 @@ body {
   padding: 20px 16px 80px 16px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 36px;
 }
 
-.semester-bar {
+#months-container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* Drawer Year Selector */
+.drawer-year-selector {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #0E131F;
+  padding: 8px 12px;
+  border-radius: 10px;
   border: 1px solid #1E293B;
-  border-radius: 12px;
-  padding: 10px 16px;
-  gap: 16px;
-}
-
-.year-selector {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  margin-bottom: 6px;
 }
 
 .btn-year-nav {

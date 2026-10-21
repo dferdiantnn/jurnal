@@ -220,27 +220,20 @@ function updateSemesterUI() {
   const yearEl = document.getElementById('active-year-display');
   if (yearEl) yearEl.textContent = STATE.activeYear;
 
-  const tab1 = document.getElementById('tab-sem-1');
-  const tab2 = document.getElementById('tab-sem-2');
   const dSem1 = document.getElementById('d-sem-1');
   const dSem2 = document.getElementById('d-sem-2');
 
   if (STATE.activeSemester === 1) {
-    if (tab1) tab1.classList.add('active');
-    if (tab2) tab2.classList.remove('active');
     if (dSem1) dSem1.classList.add('active');
     if (dSem2) dSem2.classList.remove('active');
   } else {
-    if (tab2) tab2.classList.add('active');
-    if (tab1) tab1.classList.remove('active');
     if (dSem2) dSem2.classList.add('active');
     if (dSem1) dSem1.classList.remove('active');
   }
 
   const quickBadge = document.getElementById('quick-semester-badge');
   if (quickBadge) {
-    const semName = STATE.activeSemester === 1 ? 'Jan — Jun' : 'Jul — Des';
-    quickBadge.textContent = `Semester ${STATE.activeSemester} (${semName} ${STATE.activeYear})`;
+    quickBadge.textContent = `Semester ${STATE.activeSemester} · ${STATE.activeYear}`;
   }
 }
 
@@ -527,10 +520,10 @@ function toggleAutoHideSetting(e) {
   STATE.autoHideEnabled = e.target.checked;
   localStorage.setItem('auto_hide_header', STATE.autoHideEnabled ? 'true' : 'false');
   if (STATE.autoHideEnabled) {
-    showToast('👁️ Header akan otomatis sembunyi saat idle');
+    showToast('Header akan otomatis sembunyi saat idle');
     resetIdleTimer();
   } else {
-    showToast('👁️ Auto-hide dinonaktifkan');
+    showToast('Auto-hide dinonaktifkan');
     if (idleTimer) clearTimeout(idleTimer);
     restoreHeader();
   }
