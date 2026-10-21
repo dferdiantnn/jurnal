@@ -30,11 +30,11 @@ Jurnal trading berbasis web minimalis dengan tema dark mode obsidian (`#08090C`)
 ## Cara Sinkronkan Transaksi dari MetaTrader 5 (MT5)
 
 ### 1. Sinkronisasi Cepat Lewat Terminal (0% Beban Laptop)
-Cukup jalankan satu perintah ini di terminal:
+Cukup ketik satu kata ini di terminal:
 ```bash
-jurnal sync
+jurnal
 ```
-Perintah ini akan membaca laporan transaksi terbaru, memperbarui metadata waktu update, dan langsung mem-push ke GitHub Pages dalam ~0.3 detik.
+Perintah ini akan membaca transaksi closed terbaru, memperbarui penanda waktu update, dan langsung mem-push ke web dalam ~0.3 detik.
 
 ### 2. Drag & Drop Laporan MT5 Langsung di Web
 - Di aplikasi MT5, buka tab bawah **Toolbox > History**.
@@ -45,9 +45,9 @@ Perintah ini akan membaca laporan transaksi terbaru, memperbarui metadata waktu 
 
 ## Menjalankan Server Lokal (Opsional)
 
-Jika ingin menjalankan server lokal:
+Jika ingin menjalankan server lokal di laptop:
 ```bash
-jurnal
+jurnal serve
 ```
 Lalu buka [http://localhost:3000](http://localhost:3000) di browser.
 
