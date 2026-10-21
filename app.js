@@ -538,7 +538,113 @@ function parseMt5ReportClientSide(content) {
 // ==========================================================================
 // DRAWER MENU & AUTO-HIDE HEADER CONTROLS
 // ==========================================================================
+// ==========================================================================
+// DRAWER MENU SECURITY & ACCESS CONTROL (SALTED SHA-256 HASH)
+// ==========================================================================
+// Kriptografi satu arah: Password asli TIDAK PERNAH disimpan di file atau source code.
+// Menggunakan Web Crypto API (crypto.subtle SHA-256) dengan salt unik anti-rainbow table.
+const AUTH_SALT = "jurnal_ferr_salt_9281";
+const AUTH_HASH = "07e23ad1870b60ad2ad203a76c181cefba3c3c119c4b08a1504df8f7dddf9bba";
+
+function isMenuAuthenticated() {
+  return sessionStorage.getItem('jurnal_menu_auth') === 'verified_session';
+}
+
+function handleMenuClick() {
+  if (isMenuAuthenticated()) {
+    openDrawerMenu();
+  } else {
+    openPasswordModal();
+  }
+}
+
+function openPasswordModal() {
+  const modal = document.getElementById('password-modal');
+  const inputEl = document.getElementById('admin-password-input');
+  const errorEl = document.getElementById('password-error-msg');
+  if (modal) {
+    if (errorEl) errorEl.classList.add('hidden');
+    if (inputEl) inputEl.value = '';
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+      if (inputEl) inputEl.focus();
+    }, 100);
+  }
+}
+
+function closePasswordModal(event) {
+  if (event && event.target && event.target.closest && event.target.closest('.password-card') && !event.target.classList.contains('modal-close')) {
+    return;
+  }
+  const modal = document.getElementById('password-modal');
+  if (modal) modal.classList.add('hidden');
+}
+
+async function verifyAdminPassword() {
+  const inputEl = document.getElementById('admin-password-input');
+  const errorEl = document.getElementById('password-error-msg');
+  const cardEl = document.querySelector('.password-card');
+  if (!inputEl) return;
+
+  const inputVal = inputEl.value.trim();
+  if (!inputVal) {
+    if (errorEl) {
+      errorEl.textContent = "Kata sandi tidak boleh kosong.";
+      errorEl.classList.remove('hidden');
+    }
+    inputEl.focus();
+    return;
+  }
+
+  try {
+    const enc = new TextEncoder();
+    const data = enc.encode(AUTH_SALT + inputVal);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hexHash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+    if (hexHash === AUTH_HASH) {
+      sessionStorage.setItem('jurnal_menu_auth', 'verified_session');
+      inputEl.value = '';
+      if (errorEl) errorEl.classList.add('hidden');
+      closePasswordModal();
+      openDrawerMenu();
+      showToast("Akses pengaturan dibuka");
+    } else {
+      if (errorEl) {
+        errorEl.textContent = "Kata sandi salah. Akses ditolak.";
+        errorEl.classList.remove('hidden');
+      }
+      if (cardEl) {
+        cardEl.classList.remove('shake');
+        void cardEl.offsetWidth; // trigger reflow
+        cardEl.classList.add('shake');
+      }
+      inputEl.value = '';
+      inputEl.focus();
+    }
+  } catch (err) {
+    console.error("Crypto verification error:", err);
+  }
+}
+
+function togglePasswordVisibility() {
+  const inputEl = document.getElementById('admin-password-input');
+  if (!inputEl) return;
+  inputEl.type = inputEl.type === 'password' ? 'text' : 'password';
+}
+
+function lockMenuAccess() {
+  sessionStorage.removeItem('jurnal_menu_auth');
+  closeDrawerMenu();
+  showToast("Pengaturan dikunci kembali");
+}
+
 function openDrawerMenu() {
+  if (!isMenuAuthenticated()) {
+    openPasswordModal();
+    return;
+  }
   const overlay = document.getElementById('drawer-overlay');
   if (overlay) {
     renderDrawerAccounts();
@@ -741,6 +847,10 @@ let connectedAccounts = JSON.parse(localStorage.getItem('trading_accounts') || '
 let activeBrokerIndex = parseInt(localStorage.getItem('active_broker_index') || '0');
 
 function openBrokerModal() {
+  if (!isMenuAuthenticated()) {
+    openPasswordModal();
+    return;
+  }
   const modal = document.getElementById('broker-modal');
   if (modal) {
     renderConnectedAccounts();

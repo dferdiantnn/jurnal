@@ -1570,3 +1570,114 @@ body {
     padding: 3px 8px;
   }
 }
+
+/* Security Password Modal for Settings Access */
+.password-card {
+  max-width: 420px;
+  width: 90%;
+  background: #0d100d;
+  border: 1px solid #2a3328;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(217, 164, 65, 0.08);
+}
+
+.auth-icon-wrap {
+  width: 38px;
+  height: 38px;
+  background: rgba(217, 164, 65, 0.1);
+  border: 1px solid rgba(217, 164, 65, 0.25);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.password-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input {
+  width: 100%;
+  background: #070908;
+  border: 1px solid #2a3328;
+  border-radius: 6px;
+  padding: 11px 42px 11px 14px;
+  color: #E4E8DC;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: #D9A441;
+  box-shadow: 0 0 0 2px rgba(217, 164, 65, 0.15);
+}
+
+.btn-toggle-eye {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #8FA67C;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.btn-toggle-eye:hover {
+  color: #D9A441;
+}
+
+.password-error-msg {
+  display: block;
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #E05252;
+}
+
+.drawer-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-lock-drawer {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(224, 82, 82, 0.08);
+  border: 1px solid rgba(224, 82, 82, 0.25);
+  color: #E05252;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-lock-drawer:hover {
+  background: rgba(224, 82, 82, 0.18);
+  border-color: #E05252;
+}
+
+@keyframes shakePasswordCard {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+.password-card.shake {
+  animation: shakePasswordCard 0.38s ease-in-out;
+  border-color: #E05252;
+}
+
