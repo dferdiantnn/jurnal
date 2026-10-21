@@ -450,14 +450,19 @@ async function fetchTradeData() {
     }
   }
 
-  // 3. Gabungkan dengan data transaksi yang disimpan di localStorage browser (jika ada import di HP/web)
-  const localSaved = localStorage.getItem('local_trades_data');
-  if (localSaved) {
-    try {
-      const parsedLocal = JSON.parse(localSaved);
-      STATE.pnlData = { ...STATE.pnlData, ...parsedLocal };
-      if (parsedLocal._meta) metaData = parsedLocal._meta;
-    } catch (e) {}
+  // 3. Gunakan localStorage hanya jika static data gagal dimuat
+  if (!loaded) {
+    const localSaved = localStorage.getItem('local_trades_data');
+    if (localSaved) {
+      try {
+        const parsedLocal = JSON.parse(localSaved);
+        STATE.pnlData = { ...STATE.pnlData, ...parsedLocal };
+        if (parsedLocal._meta) metaData = parsedLocal._meta;
+      } catch (e) {}
+    }
+  } else {
+    // Hapus cache lama agar data fresh dari server tidak tertutup
+    localStorage.removeItem('local_trades_data');
   }
 
   // Update visual last updated badges
