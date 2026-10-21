@@ -63,6 +63,13 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.app-header.minimized {
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .header-left {
@@ -79,6 +86,12 @@ body {
   border: 1px solid rgba(255, 215, 0, 0.25);
   padding: 6px 12px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.broker-badge:hover {
+  border-color: rgba(255, 215, 0, 0.6);
+  background: #171B26;
 }
 
 .gold-icon {
@@ -97,6 +110,229 @@ body {
   letter-spacing: 0.5px;
   color: #FFD700;
   line-height: 1.1;
+}
+
+.broker-name {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.header-semester-display {
+  display: flex;
+  align-items: center;
+}
+
+.semester-quick-badge {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-icon-nav {
+  background: #121620;
+  border: 1px solid #1E293B;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #94A3B8;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.btn-icon-nav:hover {
+  background: #1E2638;
+  color: #F8FAFC;
+  border-color: #38BDF8;
+}
+
+.btn-menu-drawer {
+  background: #141A28;
+  border: 1px solid #2B3B55;
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-menu-drawer:hover {
+  background: #1E273D;
+  border-color: #00D2FF;
+  transform: translateY(-1px);
+}
+
+/* CSS Hamburger Lines */
+.menu-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 17px;
+  height: 12px;
+}
+.menu-lines span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #F8FAFC;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+/* Floating Restore Button when header is hidden */
+.floating-header-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 990;
+  background: rgba(14, 19, 31, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 210, 255, 0.4);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  transition: all 0.2s ease;
+}
+.floating-header-btn:hover {
+  background: #1E273D;
+  border-color: #00D2FF;
+  transform: scale(1.05);
+}
+.floating-header-btn.hidden {
+  display: none;
+}
+
+/* ==========================================================================
+   SEMESTER CONTROLLER & TIMELINE STREAM
+   ========================================================================== */
+.calendar-stream {
+  flex: 1;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 16px 80px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.semester-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0E131F;
+  border: 1px solid #1E293B;
+  border-radius: 12px;
+  padding: 10px 16px;
+  gap: 16px;
+}
+
+.year-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-year-nav {
+  background: #141A28;
+  border: 1px solid #2B3B55;
+  color: #94A3B8;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 11px;
+  transition: all 0.2s ease;
+}
+.btn-year-nav:hover {
+  background: #1E2638;
+  color: #F8FAFC;
+  border-color: #38BDF8;
+}
+
+.active-year-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: #F8FAFC;
+  min-width: 44px;
+  text-align: center;
+}
+
+.semester-tabs {
+  display: flex;
+  gap: 6px;
+  background: #080A10;
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid #1A2234;
+}
+
+.semester-tab {
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  padding: 6px 14px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.semester-tab .tab-sub {
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.semester-tab:hover {
+  color: #F8FAFC;
+}
+
+.semester-tab.active {
+  background: #1E293B;
+  color: #00D2FF;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.semester-tab.active .tab-sub {
+  color: #38BDF8;
+  opacity: 0.9;
+}
+
+#months-container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
 
 .broker-name {
@@ -894,6 +1130,279 @@ body {
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: 700;
+}
+
+/* ==========================================================================
+   SLIDE-OVER DRAWER MENU (Hamburger / Titik Tiga)
+   ========================================================================== */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1050;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.2s ease;
+}
+.drawer-overlay.hidden {
+  display: none;
+}
+
+.drawer-panel {
+  background: #0A0D15;
+  border-left: 1px solid #1E293B;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.8);
+  animation: slideDrawer 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+@keyframes slideDrawer {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.drawer-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid #1E293B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0D111A;
+}
+
+.drawer-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.drawer-icon {
+  font-size: 20px;
+}
+.drawer-header h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #F8FAFC;
+  line-height: 1.2;
+}
+.drawer-subtitle {
+  font-size: 11px;
+  color: #64748B;
+}
+
+.drawer-close {
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+.drawer-close:hover {
+  color: #F8FAFC;
+}
+
+.drawer-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  flex: 1;
+}
+
+.drawer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-title {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #94A3B8;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.section-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-add-acct {
+  background: #182030;
+  border: 1px solid #2B3B55;
+  color: #38BDF8;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-add-acct:hover {
+  background: #243248;
+  color: #F8FAFC;
+}
+
+.drawer-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.drawer-stat-card {
+  background: #0F1420;
+  border: 1px solid #1E293B;
+  border-radius: 10px;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.d-stat-label {
+  font-size: 9px;
+  font-weight: 800;
+  color: #64748B;
+  letter-spacing: 0.5px;
+}
+
+.d-stat-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #F8FAFC;
+}
+.d-stat-val.profit {
+  color: var(--profit-text);
+}
+
+.drawer-sem-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.drawer-sem-btn {
+  background: #0F1420;
+  border: 1px solid #1E293B;
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.drawer-sem-btn b {
+  font-size: 13px;
+  color: #94A3B8;
+}
+.drawer-sem-btn small {
+  font-size: 10.5px;
+  color: #64748B;
+  margin-top: 2px;
+}
+.drawer-sem-btn:hover {
+  border-color: #38BDF8;
+}
+.drawer-sem-btn.active {
+  background: rgba(0, 210, 255, 0.08);
+  border-color: #00D2FF;
+}
+.drawer-sem-btn.active b {
+  color: #00D2FF;
+}
+
+.drawer-accounts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.drawer-actions-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.drawer-action-btn {
+  background: #0F1420;
+  border: 1px solid #1E293B;
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+.drawer-action-btn:hover {
+  background: #171E2D;
+  border-color: #38BDF8;
+}
+.d-act-icon {
+  font-size: 20px;
+}
+.d-act-text {
+  display: flex;
+  flex-direction: column;
+}
+.d-act-text b {
+  font-size: 13px;
+  color: #F8FAFC;
+}
+.d-act-text small {
+  font-size: 11px;
+  color: #64748B;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #94A3B8;
+  cursor: pointer;
+  background: #0F1420;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #1E293B;
+}
+.toggle-row input[type="checkbox"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  accent-color: #00D2FF;
+}
+
+.btn-hide-now {
+  background: #141A28;
+  border: 1px solid #2B3B55;
+  color: #94A3B8;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-hide-now:hover {
+  background: #1F273A;
+  color: #F8FAFC;
 }
 
 /* ==========================================================================

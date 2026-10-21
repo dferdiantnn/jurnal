@@ -39,7 +39,10 @@ const SNAPSHOT_OCTOBER_2026 = {
 
 const STATE = {
   pnlData: { ...SNAPSHOT_OCTOBER_2026 },
-  activeMonths: []
+  activeYear: 2026,
+  activeSemester: 2, // 1 = Jan - Jun, 2 = Jul - Des
+  activeMonths: [],
+  autoHideEnabled: localStorage.getItem('auto_hide_header') === 'true'
 };
 
 const MONTH_NAMES = [
@@ -173,7 +176,7 @@ function renderMonthBlock(year, monthIndex) {
   return section;
 }
 
-// Render All Active Months in Timeline Stream (6-Month View)
+// Render All Active Months in Semester (Ordered Sequentially Downwards)
 function renderTimeline() {
   const container = document.getElementById('months-container') || document.getElementById('calendar-stream');
   if (!container) return;
@@ -184,27 +187,69 @@ function renderTimeline() {
     container.appendChild(monthNode);
   }
 
-  updatePeriodLabel();
   updateHeaderStats();
 }
 
-function updatePeriodLabel() {
-  const labelEl = document.getElementById('period-dates-label');
-  if (!labelEl || STATE.activeMonths.length === 0) return;
+function updateActiveMonthsFromSemester() {
+  const months = [];
+  const startMonth = STATE.activeSemester === 1 ? 0 : 6;
+  const endMonth = STATE.activeSemester === 1 ? 5 : 11;
 
-  const newest = STATE.activeMonths[0];
-  const oldest = STATE.activeMonths[STATE.activeMonths.length - 1];
+  for (let m = startMonth; m <= endMonth; m++) {
+    months.push({ year: STATE.activeYear, month: m });
+  }
 
-  labelEl.textContent = `${MONTH_NAMES[oldest.month]} ${oldest.year} — ${MONTH_NAMES[newest.month]} ${newest.year}`;
+  STATE.activeMonths = months;
 }
 
-// Update Top App Header Stats (Based on the active 6-Month Period)
+function switchSemester(sem) {
+  STATE.activeSemester = sem;
+  updateSemesterUI();
+  updateActiveMonthsFromSemester();
+  renderTimeline();
+}
+
+function changeYear(delta) {
+  STATE.activeYear += delta;
+  updateSemesterUI();
+  updateActiveMonthsFromSemester();
+  renderTimeline();
+}
+
+function updateSemesterUI() {
+  const yearEl = document.getElementById('active-year-display');
+  if (yearEl) yearEl.textContent = STATE.activeYear;
+
+  const tab1 = document.getElementById('tab-sem-1');
+  const tab2 = document.getElementById('tab-sem-2');
+  const dSem1 = document.getElementById('d-sem-1');
+  const dSem2 = document.getElementById('d-sem-2');
+
+  if (STATE.activeSemester === 1) {
+    if (tab1) tab1.classList.add('active');
+    if (tab2) tab2.classList.remove('active');
+    if (dSem1) dSem1.classList.add('active');
+    if (dSem2) dSem2.classList.remove('active');
+  } else {
+    if (tab2) tab2.classList.add('active');
+    if (tab1) tab1.classList.remove('active');
+    if (dSem2) dSem2.classList.add('active');
+    if (dSem1) dSem1.classList.remove('active');
+  }
+
+  const quickBadge = document.getElementById('quick-semester-badge');
+  if (quickBadge) {
+    const semName = STATE.activeSemester === 1 ? 'Jan — Jun' : 'Jul — Des';
+    quickBadge.textContent = `Semester ${STATE.activeSemester} (${semName} ${STATE.activeYear})`;
+  }
+}
+
+// Update Top App Header Stats (Based on the active Semester Period)
 function updateHeaderStats() {
   let netPnl = 0;
   let winCount = 0;
   let lossCount = 0;
 
-  // Set of year-month prefixes for the active 6 months
   const activePrefixes = new Set(
     STATE.activeMonths.map(m => `${m.year}-${String(m.month + 1).padStart(2, '0')}`)
   );
@@ -225,7 +270,7 @@ function updateHeaderStats() {
 
   if (statMonthPnl) {
     statMonthPnl.textContent = formatPnL(netPnl);
-    statMonthPnl.className = `stat-value ${netPnl >= 0 ? 'profit' : 'loss'}`;
+    statMonthPnl.className = `d-stat-val ${netPnl >= 0 ? 'profit' : 'loss'}`;
   }
 
   const totalTradingDays = winCount + lossCount;
@@ -333,7 +378,7 @@ async function fetchTradeData() {
     } catch (e) {}
   }
 
-  updateActiveMonthsFromData();
+  updateActiveMonthsFromSemester();
   renderTimeline();
 }
 
@@ -396,53 +441,121 @@ function parseMt5ReportClientSide(content) {
   return { daily, totalTrades };
 }
 
-let currentPeriodOffset = 0; // 0 = 6 bulan terkini, 6 = 6 bulan sebelumnya
+// ==========================================================================
+// DRAWER MENU & AUTO-HIDE HEADER CONTROLS
+// ==========================================================================
+function openDrawerMenu() {
+  const overlay = document.getElementById('drawer-overlay');
+  if (overlay) {
+    renderDrawerAccounts();
+    overlay.classList.remove('hidden');
+  }
+}
 
-function get6MonthWindow(offset = 0) {
-  let refY = 2026;
-  let refM = 9; // Oktober 2026
+function closeDrawerMenu() {
+  const overlay = document.getElementById('drawer-overlay');
+  if (overlay) overlay.classList.add('hidden');
+}
 
-  const keys = Object.keys(STATE.pnlData);
-  if (keys.length > 0) {
-    const sorted = [...keys].sort();
-    const latestKey = sorted[sorted.length - 1];
-    const [yStr, mStr] = latestKey.split('-');
-    const lY = parseInt(yStr);
-    const lM = parseInt(mStr) - 1;
-    if (lY > refY || (lY === refY && lM > refM)) {
-      refY = lY;
-      refM = lM;
+function renderDrawerAccounts() {
+  const listEl = document.getElementById('drawer-accounts-list');
+  if (!listEl) return;
+
+  if (connectedAccounts.length === 0) {
+    listEl.innerHTML = `
+      <div class="account-card active" onclick="closeDrawerMenu(); openBrokerModal();">
+        <div class="account-info">
+          <span class="account-title">Exness (MT5) <span class="badge-active-acct">Active</span></span>
+          <span class="account-server">Login: 463678568 • Exness-MT5Trial17</span>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  listEl.innerHTML = '';
+  connectedAccounts.forEach((acct, idx) => {
+    const isActive = idx === activeBrokerIndex;
+    const card = document.createElement('div');
+    card.className = `account-card ${isActive ? 'active' : ''}`;
+    card.onclick = () => {
+      switchActiveBroker(idx);
+      closeDrawerMenu();
+    };
+    card.style.cursor = 'pointer';
+
+    card.innerHTML = `
+      <div class="account-info">
+        <span class="account-title">${acct.title} (${acct.platform}) ${isActive ? '<span class="badge-active-acct">Active</span>' : ''}</span>
+        <span class="account-server">Server: ${acct.server} | Login: ${acct.login}</span>
+      </div>
+    `;
+    listEl.appendChild(card);
+  });
+}
+
+// Auto-hide & Minimize Header Features
+let isHeaderMinimized = false;
+let idleTimer = null;
+
+function toggleHeaderMinimize(forceHide) {
+  const header = document.getElementById('app-header');
+  const floatBtn = document.getElementById('floating-header-btn');
+  if (!header || !floatBtn) return;
+
+  if (forceHide !== undefined) {
+    isHeaderMinimized = forceHide;
+  } else {
+    isHeaderMinimized = !isHeaderMinimized;
+  }
+
+  if (isHeaderMinimized) {
+    header.classList.add('minimized');
+    floatBtn.classList.remove('hidden');
+  } else {
+    header.classList.remove('minimized');
+    floatBtn.classList.add('hidden');
+  }
+}
+
+function restoreHeader() {
+  toggleHeaderMinimize(false);
+  resetIdleTimer();
+}
+
+function toggleAutoHideSetting(e) {
+  STATE.autoHideEnabled = e.target.checked;
+  localStorage.setItem('auto_hide_header', STATE.autoHideEnabled ? 'true' : 'false');
+  if (STATE.autoHideEnabled) {
+    showToast('👁️ Header akan otomatis sembunyi saat idle');
+    resetIdleTimer();
+  } else {
+    showToast('👁️ Auto-hide dinonaktifkan');
+    if (idleTimer) clearTimeout(idleTimer);
+    restoreHeader();
+  }
+}
+
+function resetIdleTimer() {
+  if (!STATE.autoHideEnabled) return;
+  if (isHeaderMinimized) {
+    restoreHeader();
+  }
+  if (idleTimer) clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => {
+    if (STATE.autoHideEnabled && !isHeaderMinimized) {
+      const drawerOpen = !document.getElementById('drawer-overlay')?.classList.contains('hidden');
+      const modalOpen = !document.getElementById('broker-modal')?.classList.contains('hidden') || !document.getElementById('day-modal')?.classList.contains('hidden');
+      if (!drawerOpen && !modalOpen) {
+        toggleHeaderMinimize(true);
+      }
     }
-  }
-
-  let totalMonths = refY * 12 + refM - offset;
-  let curY = Math.floor(totalMonths / 12);
-  let curM = totalMonths % 12;
-
-  const months = [];
-  for (let i = 0; i < 6; i++) {
-    months.push({ year: curY, month: curM });
-    curM--;
-    if (curM < 0) {
-      curM = 11;
-      curY--;
-    }
-  }
-  return months;
+  }, 4000);
 }
 
-function changePeriodWindow(delta) {
-  currentPeriodOffset += delta;
-  if (currentPeriodOffset < 0) {
-    currentPeriodOffset = 0;
-  }
-  STATE.activeMonths = get6MonthWindow(currentPeriodOffset);
-  renderTimeline();
-}
-
-function updateActiveMonthsFromData() {
-  STATE.activeMonths = get6MonthWindow(currentPeriodOffset);
-}
+['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll'].forEach(evt => {
+  window.addEventListener(evt, resetIdleTimer, { passive: true });
+});
 
 function showToast(msg, duration = 3500) {
   const toast = document.getElementById('toast-notification');
@@ -637,7 +750,7 @@ function renderConnectedAccounts() {
       <div class="account-card active">
         <div class="account-info">
           <span class="account-title">Exness (MT5) <span class="badge-active-acct">Active</span></span>
-          <span class="account-server">Server: Exness-MT5Real | Login: 14258901 (Read-Only)</span>
+          <span class="account-server">Login: 463678568 • Exness-MT5Trial17</span>
         </div>
       </div>
     `;
@@ -697,9 +810,19 @@ function updateActiveBrokerUI() {
 // Initialize on load & setup auto-refresh polling
 window.addEventListener('DOMContentLoaded', () => {
   updateActiveBrokerUI();
-  updateActiveMonthsFromData();
+  updateSemesterUI();
+  updateActiveMonthsFromSemester();
   renderTimeline();
   fetchTradeData();
+
+  // Set initial auto-hide checkbox state
+  const chkAutoHide = document.getElementById('chk-auto-hide');
+  if (chkAutoHide) {
+    chkAutoHide.checked = STATE.autoHideEnabled;
+  }
+  if (STATE.autoHideEnabled) {
+    resetIdleTimer();
+  }
 
   // Auto-sync polling every 15 seconds
   setInterval(fetchTradeData, 15000);

@@ -10,75 +10,174 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top App Navigation & Live Sync Status -->
-  <header class="app-header">
+  <!-- Top App Navigation (Sleek Minimalist Bar) -->
+  <header class="app-header" id="app-header">
     <div class="header-left">
-      <div class="broker-badge" onclick="openBrokerModal()" title="Click to manage broker accounts">
+      <div class="broker-badge" onclick="openDrawerMenu()" title="Klik untuk Buka Menu & Akun">
         <span class="gold-icon">🏆</span>
         <div class="broker-meta">
           <span class="broker-pair" id="active-symbol">XAUUSD</span>
           <span class="broker-name" id="active-broker-label">EXNESS LIVE</span>
         </div>
-        <span class="caret-down">▼</span>
       </div>
       <div class="sync-pill" id="sync-status">
         <span class="pulse-dot"></span>
-        <span class="sync-text" id="sync-text">AUTO-SYNC LIVE</span>
+        <span class="sync-text" id="sync-text">LIVE</span>
       </div>
     </div>
 
-    <!-- Monthly Overall Stats HUD -->
-    <div class="header-stats" id="header-stats">
-      <div class="stat-item">
-        <span class="stat-label">6-MO P&L</span>
-        <span class="stat-value profit" id="stat-month-pnl">+8.42M</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-label">WIN RATE</span>
-        <span class="stat-value" id="stat-winrate">68.2%</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-label">WIN / LOSS</span>
-        <span class="stat-value"><span class="txt-profit" id="stat-win-days">15W</span> - <span class="txt-loss" id="stat-loss-days">7L</span></span>
-      </div>
+    <!-- Quick Semester Display in Center -->
+    <div class="header-semester-display" id="header-semester-display">
+      <span class="semester-quick-badge" id="quick-semester-badge">Semester 2 (Jul — Des 2026)</span>
     </div>
 
-    <div class="header-actions">
-      <input type="file" id="inp-import-file" accept=".html,.htm,.csv" style="display:none;" onchange="handleFileUpload(event)">
-      <button class="btn-action-import" onclick="document.getElementById('inp-import-file').click()" title="Import File Laporan MT4 / MT5 (HTML/CSV)">
-        <span class="btn-icon">📥</span>
-        <span class="btn-text">Import MT5</span>
+    <!-- Header Actions Right: Hide Button & Hamburger Menu -->
+    <div class="header-right">
+      <button class="btn-icon-nav" id="btn-toggle-header" onclick="toggleHeaderMinimize()" title="Sembunyikan / Tampilkan Menu Bar">
+        <span id="header-eye-icon">👁️</span>
       </button>
-      <button class="btn-action-broker" onclick="openBrokerModal()" title="Connect any Broker (Exness, XM, IC Markets, dll)">
-        <span class="btn-icon">⚙️</span>
-        <span class="btn-text">Akun Broker</span>
-      </button>
-      <button class="btn-refresh" id="btn-refresh" onclick="fetchTradeData()" title="Refresh Data">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
-        <span>Sync</span>
+
+      <button class="btn-menu-drawer" id="btn-open-menu" onclick="openDrawerMenu()" title="Buka Menu & Pengaturan">
+        <span class="menu-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
       </button>
     </div>
   </header>
 
+  <!-- Floating Minimal Toggle (Muncul saat header disembunyikan) -->
+  <button class="floating-header-btn hidden" id="floating-header-btn" onclick="restoreHeader()" title="Tampilkan Menu">
+    <span class="menu-lines">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+
   <!-- Main Scrollable Timeline Stream (Vertical Chronological Scroll) -->
   <main class="calendar-stream" id="calendar-stream">
-    <!-- 6-Month Period Controller -->
-    <div class="period-control-bar">
-      <button class="btn-period-nav" id="btn-prev-period" onclick="changePeriodWindow(6)" title="Lihat 6 Bulan Sebelumnya">
-        <span>◀</span> 6 Bulan Sebelumnya
-      </button>
-      <div class="period-indicator">
-        <span class="period-tag">TAMPILAN 6 BULAN</span>
-        <span class="period-dates" id="period-dates-label">Mei 2026 — Oktober 2026</span>
+    <!-- Semester Switcher Bar -->
+    <div class="semester-bar">
+      <!-- Year Switcher -->
+      <div class="year-selector">
+        <button class="btn-year-nav" onclick="changeYear(-1)" title="Tahun Sebelumnya">◀</button>
+        <span class="active-year-display" id="active-year-display">2026</span>
+        <button class="btn-year-nav" onclick="changeYear(1)" title="Tahun Berikutnya">▶</button>
       </div>
-      <button class="btn-period-nav" id="btn-next-period" onclick="changePeriodWindow(-6)" title="Lihat 6 Bulan Berikutnya">
-        6 Bulan Berikutnya <span>▶</span>
-      </button>
+
+      <!-- Semester 1 vs Semester 2 Tabs -->
+      <div class="semester-tabs">
+        <button class="semester-tab" id="tab-sem-1" onclick="switchSemester(1)">
+          Semester 1 <span class="tab-sub">(Jan — Jun)</span>
+        </button>
+        <button class="semester-tab active" id="tab-sem-2" onclick="switchSemester(2)">
+          Semester 2 <span class="tab-sub">(Jul — Des)</span>
+        </button>
+      </div>
     </div>
 
-    <!-- Container for the 6 months -->
+    <!-- Months Container: Ordered sequentially downwards -->
     <div id="months-container"></div>
   </main>
+
+  <!-- Slide-Over Drawer Menu (Titik Tiga / Garis Tiga) -->
+  <div class="drawer-overlay hidden" id="drawer-overlay" onclick="closeDrawerMenu()">
+    <aside class="drawer-panel" onclick="event.stopPropagation()">
+      <div class="drawer-header">
+        <div class="drawer-title-wrap">
+          <span class="drawer-icon">⚡</span>
+          <div>
+            <h3>Menu & Pengaturan</h3>
+            <span class="drawer-subtitle">Trading Journal Dashboard</span>
+          </div>
+        </div>
+        <button class="drawer-close" onclick="closeDrawerMenu()">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <!-- Section 1: Semester Performance HUD -->
+        <div class="drawer-section">
+          <span class="section-title">📊 Performa Semester Ini</span>
+          <div class="drawer-stats-grid">
+            <div class="drawer-stat-card">
+              <span class="d-stat-label">NET P&L</span>
+              <span class="d-stat-val profit" id="stat-month-pnl">+0.00</span>
+            </div>
+            <div class="drawer-stat-card">
+              <span class="d-stat-label">WIN RATE</span>
+              <span class="d-stat-val" id="stat-winrate">0.0%</span>
+            </div>
+            <div class="drawer-stat-card">
+              <span class="d-stat-label">WIN / LOSS</span>
+              <span class="d-stat-val"><span class="txt-profit" id="stat-win-days">0W</span> - <span class="txt-loss" id="stat-loss-days">0L</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Pilih Periode Semester -->
+        <div class="drawer-section">
+          <span class="section-title">📅 Pilih Periode Semester</span>
+          <div class="drawer-sem-buttons">
+            <button class="drawer-sem-btn" id="d-sem-1" onclick="switchSemester(1); closeDrawerMenu();">
+              <b>Semester 1</b>
+              <small>Januari — Juni</small>
+            </button>
+            <button class="drawer-sem-btn active" id="d-sem-2" onclick="switchSemester(2); closeDrawerMenu();">
+              <b>Semester 2</b>
+              <small>Juli — Desember</small>
+            </button>
+          </div>
+        </div>
+
+        <!-- Section 3: Akun Broker Terhubung -->
+        <div class="drawer-section">
+          <div class="section-header-flex">
+            <span class="section-title">🏢 Akun Broker Terhubung</span>
+            <button class="btn-add-acct" onclick="closeDrawerMenu(); openBrokerModal();">+ Tambah</button>
+          </div>
+          <div class="drawer-accounts-list" id="drawer-accounts-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Section 4: Aksi Cepat / Sinkronisasi -->
+        <div class="drawer-section">
+          <span class="section-title">📥 Aksi & Sinkronisasi MT5</span>
+          <input type="file" id="inp-import-file" accept=".html,.htm,.csv" style="display:none;" onchange="handleFileUpload(event)">
+          <div class="drawer-actions-col">
+            <button class="drawer-action-btn" onclick="document.getElementById('inp-import-file').click()">
+              <span class="d-act-icon">📥</span>
+              <div class="d-act-text">
+                <b>Import Laporan MT5</b>
+                <small>Upload file .html / .csv dari MT5</small>
+              </div>
+            </button>
+            <button class="drawer-action-btn" onclick="fetchTradeData(); showToast('Memperbarui data...');">
+              <span class="d-act-icon">🔄</span>
+              <div class="d-act-text">
+                <b>Sinkronkan Sekarang</b>
+                <small>Tarik transaksi closed terbaru</small>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Section 5: Opsi Tampilan (Auto-Hide Header) -->
+        <div class="drawer-section">
+          <span class="section-title">👁️ Pengaturan Tampilan</span>
+          <label class="toggle-row">
+            <span>Sembunyikan Header Otomatis (saat tidak ada interaksi)</span>
+            <input type="checkbox" id="chk-auto-hide" onchange="toggleAutoHideSetting(event)">
+          </label>
+          <button class="btn-hide-now" onclick="closeDrawerMenu(); toggleHeaderMinimize(true);">
+            🙈 Sembunyikan Header Sekarang
+          </button>
+        </div>
+      </div>
+    </aside>
+  </div>
 
   <!-- Trade Details Modal / Popover -->
   <div class="modal-overlay hidden" id="day-modal" onclick="closeModal(event)">
