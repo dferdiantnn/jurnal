@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261021_rev3">
+  <link rel="stylesheet" href="style.css?v=20261021_rev4">
 </head>
 <body>
   <!-- Top Navigation (Clean Minimal Bar) -->
@@ -20,6 +20,10 @@
     </div>
 
     <div class="nav-right">
+      <div class="nav-last-updated" id="nav-last-updated" title="Waktu sinkronisasi data terakhir">
+        <span class="status-dot"></span>
+        <span class="update-text" id="nav-update-text">Update: Memuat...</span>
+      </div>
       <button class="btn-menu" id="btn-open-menu" onclick="openDrawerMenu()" title="Buka Menu">
         <span class="menu-lines">
           <span></span>
@@ -41,7 +45,7 @@
       <div class="drawer-header">
         <div class="drawer-title-wrap">
           <h3>Menu & Pengaturan</h3>
-          <span class="drawer-subtitle">Trading Journal Dashboard</span>
+          <span class="drawer-subtitle" id="drawer-last-updated">Terakhir Sync: -</span>
         </div>
         <button class="drawer-close" onclick="closeDrawerMenu()">&times;</button>
       </div>
@@ -101,7 +105,22 @@
 
         <!-- Section 4: Aksi Cepat / Sinkronisasi -->
         <div class="drawer-section">
-          <span class="section-title">Sinkronisasi MT5</span>
+          <div class="section-header-flex">
+            <span class="section-title">Sinkronisasi MT5</span>
+            <span class="sync-badge" id="sync-badge">Siap</span>
+          </div>
+
+          <div class="sync-info-card">
+            <div class="sync-info-row">
+              <span class="sync-label">Waktu Sync:</span>
+              <span class="sync-value" id="sync-meta-time">-</span>
+            </div>
+            <div class="sync-info-row">
+              <span class="sync-label">Akun MT5:</span>
+              <span class="sync-value" id="sync-meta-account">463678568 (Exness)</span>
+            </div>
+          </div>
+
           <input type="file" id="inp-import-file" accept=".html,.htm,.csv" style="display:none;" onchange="handleFileUpload(event)">
           <div class="drawer-actions-col">
             <button class="drawer-action-btn" onclick="document.getElementById('inp-import-file').click()">
@@ -110,7 +129,7 @@
                 <small>Upload file laporan .html / .csv dari MT5</small>
               </div>
             </button>
-            <button class="drawer-action-btn" onclick="fetchTradeData(); showToast('Memperbarui data...');">
+            <button class="drawer-action-btn" onclick="refreshAndSync()">
               <div class="d-act-text">
                 <b>Sinkronkan Sekarang</b>
                 <small>Tarik transaksi closed terbaru</small>
@@ -247,6 +266,6 @@
   <!-- Toast Notification -->
   <div class="toast-notification hidden" id="toast-notification"></div>
 
-  <script src="app.js?v=20261021_rev3"></script>
+  <script src="app.js?v=20261021_rev4"></script>
 </body>
 </html>

@@ -113,10 +113,57 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 .btn-menu:hover {
   background: #1A2234;
   border-color: #38BDF8;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-last-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0E131F;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 5px 9px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #94A3B8;
+  cursor: default;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.nav-last-updated:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  color: #E2E8F0;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.7);
+  flex-shrink: 0;
+}
+
+@media (max-width: 520px) {
+  .nav-badge {
+    display: none;
+  }
+  .nav-last-updated {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
 }
 
 /* CSS Hamburger Lines */
@@ -1242,6 +1289,47 @@ body {
   gap: 8px;
   max-height: 180px;
   overflow-y: auto;
+}
+
+.sync-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 2px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sync-info-card {
+  background: #0A0D15;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sync-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+}
+
+.sync-label {
+  color: #64748B;
+  font-weight: 500;
+}
+
+.sync-value {
+  font-family: 'JetBrains Mono', monospace;
+  color: #38BDF8;
+  font-weight: 600;
 }
 
 .drawer-actions-col {

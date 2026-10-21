@@ -248,6 +248,7 @@ function updateHeaderStats() {
   );
 
   for (const [key, val] of Object.entries(STATE.pnlData)) {
+    if (key.startsWith('_')) continue;
     const prefix = key.slice(0, 7);
     if (activePrefixes.has(prefix)) {
       netPnl += val.pnl;
@@ -327,10 +328,84 @@ function closeModal(e) {
   modal.classList.add('hidden');
 }
 
+function formatLastUpdated(isoString) {
+  if (!isoString) return "-";
+  try {
+    const d = new Date(isoString);
+    if (isNaN(d.getTime())) return "-";
+    const months = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nov", "Des"];
+    const day = d.getDate();
+    const month = months[d.getMonth()];
+    const year = d.getFullYear();
+    const hours = String(d.getHours()).padStart(2, '0');
+    const mins = String(d.getMinutes()).padStart(2, '0');
+    return `${day} ${month} ${year}, ${hours}:${mins} WIB`;
+  } catch (e) {
+    return "-";
+  }
+}
+
+function formatShortUpdated(isoString) {
+  if (!isoString) return "-";
+  try {
+    const d = new Date(isoString);
+    if (isNaN(d.getTime())) return "-";
+    const months = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nov", "Des"];
+    const day = d.getDate();
+    const month = months[d.getMonth()];
+    const hours = String(d.getHours()).padStart(2, '0');
+    const mins = String(d.getMinutes()).padStart(2, '0');
+    return `${day} ${month}, ${hours}:${mins}`;
+  } catch (e) {
+    return "-";
+  }
+}
+
+function updateLastUpdatedDisplay(meta) {
+  const navUpdateText = document.getElementById('nav-update-text');
+  const navUpdated = document.getElementById('nav-last-updated');
+  const drawerUpdated = document.getElementById('drawer-last-updated');
+  const syncMetaTime = document.getElementById('sync-meta-time');
+  const syncMetaAccount = document.getElementById('sync-meta-account');
+  const syncBadge = document.getElementById('sync-badge');
+
+  if (meta && meta.last_updated) {
+    const shortStr = formatShortUpdated(meta.last_updated);
+    const fullStr = formatLastUpdated(meta.last_updated);
+
+    if (navUpdateText) {
+      navUpdateText.textContent = `Update: ${shortStr}`;
+    }
+    if (navUpdated) {
+      navUpdated.title = `Data terakhir diperbarui: ${fullStr}`;
+    }
+    if (drawerUpdated) {
+      drawerUpdated.textContent = `Terakhir Sync: ${fullStr}`;
+    }
+    if (syncMetaTime) {
+      syncMetaTime.textContent = fullStr;
+    }
+    if (syncMetaAccount && meta.account) {
+      syncMetaAccount.textContent = `${meta.account} (${meta.server || 'MT5'})`;
+    }
+    if (syncBadge) {
+      syncBadge.textContent = 'Terbaru';
+    }
+  } else {
+    if (navUpdateText) navUpdateText.textContent = `Update: Terbaru`;
+  }
+}
+
+async function refreshAndSync() {
+  showToast('Memeriksa pembaruan data...');
+  await fetchTradeData();
+  showToast('Data kalender sudah paling baru');
+}
+
 // Fetch live trade data from backend API or static JSON (for GitHub Pages)
 async function fetchTradeData() {
-  const syncPill = document.getElementById('sync-status');
   let loaded = false;
+  let metaData = null;
 
   // 1. Coba hubungi Backend API lokal jika server sedang berjalan
   try {
@@ -339,6 +414,7 @@ async function fetchTradeData() {
       const data = await res.json();
       if (data && data.history && Object.keys(data.history).length > 0) {
         STATE.pnlData = data.history;
+        metaData = data.history._meta || { last_updated: data.server_time, account: '463678568' };
         loaded = true;
       }
     }
@@ -346,14 +422,15 @@ async function fetchTradeData() {
     // Backend API lokal tidak aktif (misal running di GitHub Pages)
   }
 
-  // 2. Jika di GitHub Pages / Static Hosting, baca langsung file trades_data.json
+  // 2. Jika di GitHub Pages / Static Hosting, baca langsung file trades_data.json dengan cache-busting
   if (!loaded) {
     try {
-      const res = await fetch('./trades_data.json');
+      const res = await fetch(`./trades_data.json?t=${Date.now()}`);
       if (res.ok) {
         const staticData = await res.json();
         if (staticData && Object.keys(staticData).length > 0) {
           STATE.pnlData = staticData;
+          metaData = staticData._meta;
           loaded = true;
         }
       }
@@ -368,7 +445,15 @@ async function fetchTradeData() {
     try {
       const parsedLocal = JSON.parse(localSaved);
       STATE.pnlData = { ...STATE.pnlData, ...parsedLocal };
+      if (parsedLocal._meta) metaData = parsedLocal._meta;
     } catch (e) {}
+  }
+
+  // Update visual last updated badges
+  if (metaData) {
+    updateLastUpdatedDisplay(metaData);
+  } else if (STATE.pnlData._meta) {
+    updateLastUpdatedDisplay(STATE.pnlData._meta);
   }
 
   updateActiveMonthsFromSemester();
