@@ -1,65 +1,57 @@
-# 🏆 Universal Trading PnL Calendar Journal
+# Universal Trading PnL Calendar Journal
 
 [![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-Buka_Jurnal_Trading-00D2FF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://dferdiantnn.github.io/jurnal/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Online-10B981?style=for-the-badge&logo=github)](https://dferdiantnn.github.io/jurnal/)
 
-> 🌐 **Link Jurnal Trading (Live):**  
-> 👉 **[https://dferdiantnn.github.io/jurnal/](https://dferdiantnn.github.io/jurnal/)**  
+> **Link Jurnal Trading (Live):**  
+> **[https://dferdiantnn.github.io/jurnal/](https://dferdiantnn.github.io/jurnal/)**  
 > *(Dapat dibuka langsung dari browser HP, tablet, maupun laptop kapan saja)*
 
 ---
 
-A modern, minimal, dark-mode trading journal inspired by high-frequency prop trading calendars. Automatically tracks and calculates daily net P&L, win rate, and performance metrics across universal MetaTrader (MT4/MT5) brokers (Exness, XM, IC Markets, dll).
+Jurnal trading berbasis web minimalis dengan tema dark mode obsidian (`#08090C`), cyan profits (`+2.42M`), dan red losses (`-1.41M`). Otomatis menghitung daily net P&L, win rate, dan metrik performa transaksi MT4/MT5.
 
 ---
 
-## ✨ Fitur Utama
+## Fitur Utama
 
 - **Tampilan Per Semester Rapi (Urut ke Bawah)**:
   - **Semester 1**: Januari &rarr; Februari &rarr; Maret &rarr; April &rarr; Mei &rarr; Juni.
   - **Semester 2**: Juli &rarr; Agustus &rarr; September &rarr; Oktober &rarr; November &rarr; Desember.
-  - Tombol pemilih semester dan navigasi tahun yang presisi.
-- **Header Minimalis & Auto-Hide**:
-  - Tampilan atas ultra-bersih tanpa tombol menumpuk.
-  - Tombol sembunyikan (`👁️`) + Tombol mengambang (`☰`) saat header disembunyikan.
-  - Opsi auto-hide saat idle (tidak ada interaksi mouse/layar selama 4 detik).
-- **Menu Garis Tiga (`☰`) / Drawer Samping**:
-  - **Ringkasan Performa Semester**: Net P&L, Win Rate %, dan Win/Loss.
-  - **Manajemen Akun Broker**: Terhubung langsung ke akun MT5 Exness Anda.
-  - **Aksi Cepat**: Tombol import file laporan MT5 dan sinkronisasi real-time.
-- **Dark Minimalist Aesthetic**: Deep obsidian background (`#08090C`), electric cyan profits (`+2.42M`), dan crimson red losses (`-1.41M`).
-- **Client-Side MT5 Report Parser**: Drag & drop laporan transaksi HTML dari MT5 langsung ke browser tanpa server.
+- **Header Minimalis & Menu Samping (`☰`)**:
+  - Tampilan utama bersih tanpa tombol yang menumpuk.
+  - Semua pengaturan, ringkasan performa semester, akun broker terhubung, dan waktu pembaruan terakhir tersusun rapi di dalam drawer menu.
+  - Indikator status dan waktu update terakhir (`Update: 21 Okt, 18:23 WIB`) selalu terpampang jelas.
+- **Zero-Load CLI Sync (~0.3 Detik)**:
+  - Jalankan perintah sinkronisasi sekali ketik, data langsung ter-push ke web dalam sekejap tanpa membebani laptop.
 
 ---
 
-## ⚡ Cara Sinkronkan Transaksi dari MetaTrader 5 (MT5)
+## Cara Sinkronkan Transaksi dari MetaTrader 5 (MT5)
 
-1. **Cara 1: Drag & Drop Laporan MT5 (Paling Cepat & Mudah)**
-   - Di aplikasi MT5, buka tab bawah **Toolbox > History**.
-   - Klik kanan di mana saja &rarr; **Report** &rarr; **HTML**.
-   - Simpan filenya, lalu drag & drop file `.html` tersebut langsung ke layar web browser (atau klik **Import MT5** di dalam menu garis tiga).
-
-2. **Cara 2: Script Otomatis MT5**
-   - Copy file `Sync_Journal.mq5` ke folder MT5 Anda: `MQL5/Scripts/`.
-   - Di panel kiri MT5 (**Navigator > Scripts**), drag script `Sync_Journal` ke chart aktif untuk mengekspor riwayat deal closed secara otomatis.
-
----
-
-## 🚀 Menjalankan Secara Lokal (Opsional)
-
-Jika ingin menjalankan server lokal di laptop:
-
+### 1. Sinkronisasi Cepat Lewat Terminal (0% Beban Laptop)
+Cukup jalankan satu perintah ini di terminal:
 ```bash
-# Clone repository
-git clone https://github.com/dferdiantnn/jurnal.git
-cd jurnal
+jurnal sync
+```
+Perintah ini akan membaca laporan transaksi terbaru, memperbarui metadata waktu update, dan langsung mem-push ke GitHub Pages dalam ~0.3 detik.
 
-# Jalankan server
-python3 server.py
+### 2. Drag & Drop Laporan MT5 Langsung di Web
+- Di aplikasi MT5, buka tab bawah **Toolbox > History**.
+- Klik kanan di mana saja &rarr; **Report** &rarr; **HTML**.
+- Drag & drop file `.html` tersebut langsung ke layar web browser (atau gunakan tombol **Import Laporan MT5** di dalam menu samping `☰`).
+
+---
+
+## Menjalankan Server Lokal (Opsional)
+
+Jika ingin menjalankan server lokal:
+```bash
+jurnal
 ```
 Lalu buka [http://localhost:3000](http://localhost:3000) di browser.
 
 ---
 
-## 📄 License
-MIT License. Dibuat untuk kenyamanan para trader.
+## Lisensi
+MIT License.
