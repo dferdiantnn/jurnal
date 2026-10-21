@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Universal Trading PnL Calendar Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top App Navigation & Live Sync Status -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="broker-badge" onclick="openBrokerModal()" title="Click to manage broker accounts">
+        <span class="gold-icon">🏆</span>
+        <div class="broker-meta">
+          <span class="broker-pair" id="active-symbol">XAUUSD</span>
+          <span class="broker-name" id="active-broker-label">EXNESS LIVE</span>
+        </div>
+        <span class="caret-down">▼</span>
+      </div>
+      <div class="sync-pill" id="sync-status">
+        <span class="pulse-dot"></span>
+        <span class="sync-text" id="sync-text">AUTO-SYNC LIVE</span>
+      </div>
+    </div>
+
+    <!-- Monthly Overall Stats HUD -->
+    <div class="header-stats" id="header-stats">
+      <div class="stat-item">
+        <span class="stat-label">6-MO P&L</span>
+        <span class="stat-value profit" id="stat-month-pnl">+8.42M</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">WIN RATE</span>
+        <span class="stat-value" id="stat-winrate">68.2%</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">WIN / LOSS</span>
+        <span class="stat-value"><span class="txt-profit" id="stat-win-days">15W</span> - <span class="txt-loss" id="stat-loss-days">7L</span></span>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <input type="file" id="inp-import-file" accept=".html,.htm,.csv" style="display:none;" onchange="handleFileUpload(event)">
+      <button class="btn-action-import" onclick="document.getElementById('inp-import-file').click()" title="Import File Laporan MT4 / MT5 (HTML/CSV)">
+        <span class="btn-icon">📥</span>
+        <span class="btn-text">Import MT5</span>
+      </button>
+      <button class="btn-action-broker" onclick="openBrokerModal()" title="Connect any Broker (Exness, XM, IC Markets, dll)">
+        <span class="btn-icon">⚙️</span>
+        <span class="btn-text">Akun Broker</span>
+      </button>
+      <button class="btn-refresh" id="btn-refresh" onclick="fetchTradeData()" title="Refresh Data">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+        <span>Sync</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Scrollable Timeline Stream (Vertical Chronological Scroll) -->
+  <main class="calendar-stream" id="calendar-stream">
+    <!-- 6-Month Period Controller -->
+    <div class="period-control-bar">
+      <button class="btn-period-nav" id="btn-prev-period" onclick="changePeriodWindow(6)" title="Lihat 6 Bulan Sebelumnya">
+        <span>◀</span> 6 Bulan Sebelumnya
+      </button>
+      <div class="period-indicator">
+        <span class="period-tag">TAMPILAN 6 BULAN</span>
+        <span class="period-dates" id="period-dates-label">Mei 2026 — Oktober 2026</span>
+      </div>
+      <button class="btn-period-nav" id="btn-next-period" onclick="changePeriodWindow(-6)" title="Lihat 6 Bulan Berikutnya">
+        6 Bulan Berikutnya <span>▶</span>
+      </button>
+    </div>
+
+    <!-- Container for the 6 months -->
+    <div id="months-container"></div>
+  </main>
+
+  <!-- Trade Details Modal / Popover -->
+  <div class="modal-overlay hidden" id="day-modal" onclick="closeModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-date">07 October 2026</h3>
+          <span class="modal-subtitle">Trade Performance Breakdown</span>
+        </div>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-pnl-banner" id="modal-pnl-banner">
+          <span class="modal-pnl-label">Net Daily Result:</span>
+          <span class="modal-pnl-val" id="modal-pnl-val">+2.42M</span>
+        </div>
+        <div class="trades-list" id="modal-trades-list">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Universal Multi-Broker Account Connector Modal -->
+  <div class="modal-overlay hidden" id="broker-modal" onclick="closeBrokerModal(event)">
+    <div class="modal-card broker-modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <h3>⚙️ Hubungkan Akun Broker (MT4 / MT5)</h3>
+          <span class="modal-subtitle">Mendukung Exness, XM, IC Markets, OctaFX, & Semua Broker Dunia</span>
+        </div>
+        <button class="modal-close" onclick="closeBrokerModal()">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Safety Banner -->
+        <div class="safety-banner">
+          <span class="shield-icon">🛡️</span>
+          <div>
+            <b>100% Aman (Akses Hanya-Baca):</b>
+            <p>Investor Password hanya memberi izin membaca riwayat transaksi. Tidak bisa buka/tutup order dan tidak bisa menarik uang.</p>
+          </div>
+        </div>
+
+        <!-- Panduan Sinkronisasi Singkat -->
+        <div style="margin: 12px 0 16px 0; background: #0E131F; border: 1px solid #1E293B; border-radius: 8px; padding: 12px; font-size: 12px; color: #94A3B8; line-height: 1.6;">
+          <b style="color: #38BDF8; display: block; margin-bottom: 4px;">⚡ 2 Cara Sinkronkan Riwayat Akun MT5:</b>
+          <div><b>1. Lewat Script MT5 (Otomatis):</b> Di panel kiri MT5 (Navigator) &rarr; buka <i>Scripts</i> &rarr; klik ganda / drag script <b>Sync_Journal</b> ke chart.</div>
+          <div style="margin-top: 4px;"><b>2. Lewat Laporan HTML:</b> Di tab <i>History</i> MT5 &rarr; Klik kanan &rarr; <b>Report</b> &rarr; <b>HTML</b>, lalu drag filenya langsung ke web ini atau klik tombol <b>Import MT5</b> di atas.</div>
+        </div>
+
+        <!-- Quick Broker Presets -->
+        <div class="form-group">
+          <label class="form-label">Pilih Broker Populer / Kustom:</label>
+          <div class="broker-presets" id="broker-presets">
+            <button type="button" class="preset-btn active" onclick="selectBrokerPreset('Exness', 'Exness-MT5Real')">Exness</button>
+            <button type="button" class="preset-btn" onclick="selectBrokerPreset('XM Global', 'XMGlobal-Real 50')">XM</button>
+            <button type="button" class="preset-btn" onclick="selectBrokerPreset('IC Markets', 'ICMarketsSC-Live01')">IC Markets</button>
+            <button type="button" class="preset-btn" onclick="selectBrokerPreset('OctaFX', 'OctaFX-Real')">OctaFX</button>
+            <button type="button" class="preset-btn" onclick="selectBrokerPreset('HFM', 'HFMarketsSV-Live Server')">HFM</button>
+            <button type="button" class="preset-btn" onclick="selectBrokerPreset('Lainnya', '')">Lainnya...</button>
+          </div>
+        </div>
+
+        <form id="broker-form" onsubmit="handleSaveBroker(event)">
+          <!-- Platform MT4 vs MT5 Toggle -->
+          <div class="form-group">
+            <label class="form-label">Tipe Platform:</label>
+            <div class="platform-toggle">
+              <label class="radio-tab active" id="tab-mt5">
+                <input type="radio" name="platform" value="MT5" checked onchange="togglePlatformTab('MT5')">
+                <span>MetaTrader 5 (MT5)</span>
+              </label>
+              <label class="radio-tab" id="tab-mt4">
+                <input type="radio" name="platform" value="MT4" onchange="togglePlatformTab('MT4')">
+                <span>MetaTrader 4 (MT4)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Server Name Input -->
+          <div class="form-group">
+            <label class="form-label" for="inp-server">Nama Server Broker:</label>
+            <input type="text" id="inp-server" class="form-input" placeholder="contoh: Exness-MT5Real, XMGlobal-Real" value="Exness-MT5Real" required>
+            <span class="input-hint">Dapat dilihat di info akun aplikasi Exness / MT4 / MT5 Anda.</span>
+          </div>
+
+          <!-- Account ID / Login Number -->
+          <div class="form-group">
+            <label class="form-label" for="inp-login">Nomor Akun (Login ID):</label>
+            <input type="number" id="inp-login" class="form-input" placeholder="contoh: 14258901" required>
+          </div>
+
+          <!-- Investor Password (Read-Only) -->
+          <div class="form-group">
+            <label class="form-label" for="inp-investor-pass">Kata Sandi Investor (Read-Only):</label>
+            <input type="password" id="inp-investor-pass" class="form-input" placeholder="Masukkan Investor Password Anda" required>
+            <span class="input-hint">Bukan kata sandi utama (Master Password), murni kata sandi akses baca.</span>
+          </div>
+
+          <button type="submit" class="btn-submit-broker" id="btn-save-broker">
+            <span>🔗 Hubungkan & Sinkronkan Kalender</span>
+          </button>
+        </form>
+
+        <!-- Connected Accounts List -->
+        <div class="connected-accounts-section" id="connected-accounts-section">
+          <label class="form-label">Akun Yang Terhubung:</label>
+          <div class="accounts-list" id="accounts-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drag and Drop Dropzone Overlay -->
+  <div class="drop-overlay hidden" id="drop-overlay">
+    <div class="drop-box">
+      <span class="drop-icon">📥</span>
+      <h3>Lepaskan File Laporan MT4 / MT5 Disini</h3>
+      <p>File .html / .htm / .csv akan otomatis dibaca dan disinkronkan ke kalender</p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification hidden" id="toast-notification"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

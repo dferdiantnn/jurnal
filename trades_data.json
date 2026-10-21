@@ -1,0 +1,4874 @@
+{
+  "2026-10-12": {
+    "pnl": 5.37,
+    "trades": [
+      {
+        "time": "01:29",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.1,
+        "profit": -25.76
+      },
+      {
+        "time": "05:11",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.05,
+        "profit": 84.29
+      },
+      {
+        "time": "12:21",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.05,
+        "profit": -53.16
+      }
+    ]
+  },
+  "2026-10-13": {
+    "pnl": -131.47,
+    "trades": [
+      {
+        "time": "01:48",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -10.45
+      },
+      {
+        "time": "01:48",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -10.65
+      },
+      {
+        "time": "01:48",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -10.35
+      },
+      {
+        "time": "01:48",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -10.6
+      },
+      {
+        "time": "02:43",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.1,
+        "profit": -25.8
+      },
+      {
+        "time": "02:43",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.1,
+        "profit": -20.88
+      },
+      {
+        "time": "02:43",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.04,
+        "profit": -11.8
+      },
+      {
+        "time": "02:43",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.04,
+        "profit": -10.98
+      },
+      {
+        "time": "02:43",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.02,
+        "profit": -5.19
+      },
+      {
+        "time": "02:43",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.02,
+        "profit": -5.07
+      },
+      {
+        "time": "02:43",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.02,
+        "profit": -4.86
+      },
+      {
+        "time": "02:43",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.02,
+        "profit": -4.84
+      }
+    ]
+  },
+  "2026-10-14": {
+    "pnl": -100.44,
+    "trades": [
+      {
+        "time": "10:27",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -20.35
+      },
+      {
+        "time": "10:27",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -20.26
+      },
+      {
+        "time": "10:27",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -20.06
+      },
+      {
+        "time": "10:27",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -20.01
+      },
+      {
+        "time": "10:27",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -19.76
+      }
+    ]
+  },
+  "2026-10-19": {
+    "pnl": -31.15,
+    "trades": [
+      {
+        "time": "00:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.05,
+        "profit": -31.15
+      }
+    ]
+  },
+  "2026-08-12": {
+    "pnl": -35.48,
+    "trades": [
+      {
+        "time": "04:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.14
+      },
+      {
+        "time": "04:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.14
+      },
+      {
+        "time": "04:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.14
+      },
+      {
+        "time": "04:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.25
+      },
+      {
+        "time": "04:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.25
+      },
+      {
+        "time": "04:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.25
+      },
+      {
+        "time": "04:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.02
+      },
+      {
+        "time": "04:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.02
+      },
+      {
+        "time": "04:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.02
+      },
+      {
+        "time": "04:32",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.1
+      },
+      {
+        "time": "04:32",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.1
+      },
+      {
+        "time": "04:32",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.1
+      },
+      {
+        "time": "04:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.19
+      },
+      {
+        "time": "04:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.19
+      },
+      {
+        "time": "04:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.19
+      },
+      {
+        "time": "04:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.19
+      },
+      {
+        "time": "04:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.19
+      },
+      {
+        "time": "04:35",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "04:35",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "04:35",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.22
+      },
+      {
+        "time": "04:35",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.4
+      },
+      {
+        "time": "04:35",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.91
+      },
+      {
+        "time": "04:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "05:08",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "05:08",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "05:08",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "05:08",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "05:08",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "05:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -3.87
+      },
+      {
+        "time": "05:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.14
+      },
+      {
+        "time": "05:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.14
+      },
+      {
+        "time": "05:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.14
+      },
+      {
+        "time": "05:16",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "05:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.73
+      },
+      {
+        "time": "05:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.73
+      },
+      {
+        "time": "05:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.73
+      },
+      {
+        "time": "05:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.73
+      },
+      {
+        "time": "05:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.73
+      },
+      {
+        "time": "05:20",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "05:20",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "05:22",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "05:22",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "05:22",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "05:22",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "05:23",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.91
+      },
+      {
+        "time": "05:23",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.91
+      },
+      {
+        "time": "05:23",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.66
+      },
+      {
+        "time": "05:25",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "05:25",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "05:25",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "05:25",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "05:25",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.16
+      },
+      {
+        "time": "05:29",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "05:30",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "05:43",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "05:45",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "05:58",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "06:55",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.11
+      },
+      {
+        "time": "07:39",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 6.22
+      },
+      {
+        "time": "07:51",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 9.34
+      },
+      {
+        "time": "09:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 12.46
+      },
+      {
+        "time": "10:55",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 10.02
+      },
+      {
+        "time": "11:01",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.53
+      },
+      {
+        "time": "11:01",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.46
+      },
+      {
+        "time": "11:01",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.46
+      },
+      {
+        "time": "11:01",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.46
+      },
+      {
+        "time": "11:01",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.46
+      },
+      {
+        "time": "11:05",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "11:13",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "11:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.08
+      },
+      {
+        "time": "11:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.08
+      },
+      {
+        "time": "11:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.08
+      },
+      {
+        "time": "12:01",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -2.88
+      },
+      {
+        "time": "12:01",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -2.88
+      },
+      {
+        "time": "12:01",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -2.88
+      },
+      {
+        "time": "12:01",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -2.88
+      },
+      {
+        "time": "12:01",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -2.88
+      },
+      {
+        "time": "12:03",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "12:05",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "12:22",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "12:31",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -11.26
+      },
+      {
+        "time": "12:32",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -11.75
+      },
+      {
+        "time": "13:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.1
+      },
+      {
+        "time": "13:10",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.1
+      },
+      {
+        "time": "13:12",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.1
+      },
+      {
+        "time": "13:13",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.1
+      },
+      {
+        "time": "13:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "14:14",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.58
+      },
+      {
+        "time": "14:14",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.58
+      },
+      {
+        "time": "14:14",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.58
+      },
+      {
+        "time": "14:14",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.58
+      },
+      {
+        "time": "14:14",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.58
+      },
+      {
+        "time": "14:15",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "14:16",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.58
+      },
+      {
+        "time": "14:16",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.58
+      },
+      {
+        "time": "14:16",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.58
+      },
+      {
+        "time": "14:16",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.58
+      },
+      {
+        "time": "14:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "14:19",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.54
+      },
+      {
+        "time": "14:19",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.54
+      },
+      {
+        "time": "14:19",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.86
+      },
+      {
+        "time": "14:19",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.86
+      },
+      {
+        "time": "14:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.67
+      },
+      {
+        "time": "14:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.67
+      },
+      {
+        "time": "14:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.2
+      },
+      {
+        "time": "14:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.2
+      },
+      {
+        "time": "14:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.2
+      },
+      {
+        "time": "14:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.2
+      },
+      {
+        "time": "14:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.88
+      },
+      {
+        "time": "14:24",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.02
+      },
+      {
+        "time": "14:24",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.02
+      },
+      {
+        "time": "14:24",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.96
+      },
+      {
+        "time": "14:24",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.96
+      },
+      {
+        "time": "14:24",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.96
+      },
+      {
+        "time": "14:24",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.96
+      },
+      {
+        "time": "14:24",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.02
+      },
+      {
+        "time": "14:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "14:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "14:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "14:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "14:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "14:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.94
+      },
+      {
+        "time": "14:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 3.94
+      },
+      {
+        "time": "14:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.26
+      },
+      {
+        "time": "15:04",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.27
+      },
+      {
+        "time": "15:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "15:28",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -6.4
+      },
+      {
+        "time": "15:28",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -6.4
+      },
+      {
+        "time": "15:28",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -6.33
+      },
+      {
+        "time": "15:28",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -6.33
+      },
+      {
+        "time": "15:28",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -6.33
+      },
+      {
+        "time": "15:44",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "15:44",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.27
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.02
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.02
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.02
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.02
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.02
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 3.63
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 3.63
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 3.69
+      },
+      {
+        "time": "15:47",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "15:47",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.82
+      },
+      {
+        "time": "15:47",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.82
+      },
+      {
+        "time": "15:47",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.82
+      },
+      {
+        "time": "15:47",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.82
+      },
+      {
+        "time": "15:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.22
+      },
+      {
+        "time": "15:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.17
+      },
+      {
+        "time": "15:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.17
+      },
+      {
+        "time": "15:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.17
+      },
+      {
+        "time": "15:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.17
+      },
+      {
+        "time": "15:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.41
+      },
+      {
+        "time": "15:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.41
+      },
+      {
+        "time": "15:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.41
+      },
+      {
+        "time": "15:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.41
+      },
+      {
+        "time": "15:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.41
+      },
+      {
+        "time": "15:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.23
+      },
+      {
+        "time": "15:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.23
+      },
+      {
+        "time": "15:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.23
+      },
+      {
+        "time": "15:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.23
+      },
+      {
+        "time": "15:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.23
+      },
+      {
+        "time": "15:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.41
+      },
+      {
+        "time": "15:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.41
+      },
+      {
+        "time": "15:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.41
+      },
+      {
+        "time": "15:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.41
+      },
+      {
+        "time": "15:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.41
+      },
+      {
+        "time": "15:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.08
+      },
+      {
+        "time": "15:52",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.19
+      },
+      {
+        "time": "15:52",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.19
+      },
+      {
+        "time": "15:52",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.19
+      },
+      {
+        "time": "15:52",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.19
+      },
+      {
+        "time": "15:53",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.76
+      },
+      {
+        "time": "15:53",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.76
+      },
+      {
+        "time": "15:53",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.76
+      },
+      {
+        "time": "15:53",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.76
+      },
+      {
+        "time": "15:53",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.76
+      },
+      {
+        "time": "15:54",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -3.22
+      },
+      {
+        "time": "15:54",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -3.22
+      },
+      {
+        "time": "15:54",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -3.22
+      },
+      {
+        "time": "15:54",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -3.22
+      },
+      {
+        "time": "15:54",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -3.22
+      },
+      {
+        "time": "15:58",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:58",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:58",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:58",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:58",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "16:02",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.79
+      },
+      {
+        "time": "16:02",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.79
+      },
+      {
+        "time": "16:02",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.67
+      },
+      {
+        "time": "16:02",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.61
+      },
+      {
+        "time": "16:02",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.61
+      },
+      {
+        "time": "16:04",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "16:11",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "16:20",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -3.88
+      },
+      {
+        "time": "16:20",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -3.88
+      },
+      {
+        "time": "16:20",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.06
+      },
+      {
+        "time": "16:31",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.88
+      },
+      {
+        "time": "16:31",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.88
+      },
+      {
+        "time": "16:31",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.93
+      },
+      {
+        "time": "16:31",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.93
+      },
+      {
+        "time": "16:31",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.75
+      },
+      {
+        "time": "16:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "16:56",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "16:56",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.11
+      },
+      {
+        "time": "16:56",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.22
+      },
+      {
+        "time": "17:01",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "19:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.32
+      },
+      {
+        "time": "19:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.32
+      },
+      {
+        "time": "19:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.32
+      },
+      {
+        "time": "19:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.32
+      },
+      {
+        "time": "19:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.38
+      },
+      {
+        "time": "19:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "20:18",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "22:03",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "22:05",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "23:54",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "23:59",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      }
+    ]
+  },
+  "2026-08-13": {
+    "pnl": -141.88,
+    "trades": [
+      {
+        "time": "00:01",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "00:03",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "00:07",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "01:46",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "01:52",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "01:58",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "02:02",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "02:30",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "03:02",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "03:10",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.14
+      },
+      {
+        "time": "03:11",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.14
+      },
+      {
+        "time": "03:54",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.11
+      },
+      {
+        "time": "03:55",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.17
+      },
+      {
+        "time": "06:04",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 30.99
+      },
+      {
+        "time": "07:06",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.95
+      },
+      {
+        "time": "07:13",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 3.88
+      },
+      {
+        "time": "07:30",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 5.88
+      },
+      {
+        "time": "07:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 7.88
+      },
+      {
+        "time": "08:48",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "09:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.46
+      },
+      {
+        "time": "09:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.46
+      },
+      {
+        "time": "09:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.46
+      },
+      {
+        "time": "09:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.46
+      },
+      {
+        "time": "09:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.46
+      },
+      {
+        "time": "09:27",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.79
+      },
+      {
+        "time": "09:27",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.79
+      },
+      {
+        "time": "09:27",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.79
+      },
+      {
+        "time": "09:27",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.79
+      },
+      {
+        "time": "09:27",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.79
+      },
+      {
+        "time": "09:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.52
+      },
+      {
+        "time": "09:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.52
+      },
+      {
+        "time": "09:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.52
+      },
+      {
+        "time": "09:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.52
+      },
+      {
+        "time": "09:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.56
+      },
+      {
+        "time": "10:27",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "10:38",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "10:50",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "10:52",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "11:41",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "12:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "12:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "12:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "12:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "12:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.46
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.61
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.61
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.61
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.61
+      },
+      {
+        "time": "12:32",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.44
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.44
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.44
+      },
+      {
+        "time": "13:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.2
+      },
+      {
+        "time": "13:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.2
+      },
+      {
+        "time": "13:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.2
+      },
+      {
+        "time": "13:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.27
+      },
+      {
+        "time": "13:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.27
+      },
+      {
+        "time": "13:07",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "13:12",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.4
+      },
+      {
+        "time": "13:12",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.4
+      },
+      {
+        "time": "13:12",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.4
+      },
+      {
+        "time": "13:12",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.4
+      },
+      {
+        "time": "13:14",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.71
+      },
+      {
+        "time": "13:14",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.71
+      },
+      {
+        "time": "13:14",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.71
+      },
+      {
+        "time": "13:14",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.71
+      },
+      {
+        "time": "13:14",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.71
+      },
+      {
+        "time": "13:25",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "13:25",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "13:25",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "13:25",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "13:25",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "13:30",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.95
+      },
+      {
+        "time": "13:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "13:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "13:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 3.95
+      },
+      {
+        "time": "13:33",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "13:33",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 5.95
+      },
+      {
+        "time": "13:33",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "13:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 7.95
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.79
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.79
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.79
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.79
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.79
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.28
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.33
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.09
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.09
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -2.09
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.52
+      },
+      {
+        "time": "13:39",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 7.06
+      },
+      {
+        "time": "13:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.63
+      },
+      {
+        "time": "13:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.63
+      },
+      {
+        "time": "13:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.63
+      },
+      {
+        "time": "13:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.63
+      },
+      {
+        "time": "13:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.72
+      },
+      {
+        "time": "13:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.78
+      },
+      {
+        "time": "13:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.78
+      },
+      {
+        "time": "13:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.61
+      },
+      {
+        "time": "13:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.63
+      },
+      {
+        "time": "13:40",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.53
+      },
+      {
+        "time": "13:48",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "13:48",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "13:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "13:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "13:49",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "13:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "13:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "13:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "13:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 5.88
+      },
+      {
+        "time": "13:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "13:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "13:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "13:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 7.88
+      },
+      {
+        "time": "13:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "13:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "13:51",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.22
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.22
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.22
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.22
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.22
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 3.51
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 3.99
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.59
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.86
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "14:08",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.17
+      },
+      {
+        "time": "14:11",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.08
+      },
+      {
+        "time": "14:15",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "14:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "14:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.52
+      },
+      {
+        "time": "14:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.52
+      },
+      {
+        "time": "14:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.52
+      },
+      {
+        "time": "14:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.52
+      },
+      {
+        "time": "14:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -4.52
+      },
+      {
+        "time": "14:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.28
+      },
+      {
+        "time": "14:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.19
+      },
+      {
+        "time": "14:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.19
+      },
+      {
+        "time": "14:31",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.19
+      },
+      {
+        "time": "14:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.15
+      },
+      {
+        "time": "14:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.38
+      },
+      {
+        "time": "14:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.08
+      },
+      {
+        "time": "14:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.38
+      },
+      {
+        "time": "14:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.57
+      },
+      {
+        "time": "14:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.38
+      },
+      {
+        "time": "14:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.15
+      },
+      {
+        "time": "14:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.38
+      },
+      {
+        "time": "14:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.15
+      },
+      {
+        "time": "14:34",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.08
+      },
+      {
+        "time": "14:35",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "14:36",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.8
+      },
+      {
+        "time": "14:36",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.8
+      },
+      {
+        "time": "14:36",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.75
+      },
+      {
+        "time": "14:36",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.75
+      },
+      {
+        "time": "14:36",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.09
+      },
+      {
+        "time": "14:36",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 0.09
+      },
+      {
+        "time": "14:36",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.04
+      },
+      {
+        "time": "14:36",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.04
+      },
+      {
+        "time": "14:36",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.1
+      },
+      {
+        "time": "14:37",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.8
+      },
+      {
+        "time": "14:44",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.78
+      },
+      {
+        "time": "14:44",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.02
+      },
+      {
+        "time": "14:44",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.02
+      },
+      {
+        "time": "14:44",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -6.02
+      },
+      {
+        "time": "14:45",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "14:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.11
+      },
+      {
+        "time": "14:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 6.17
+      },
+      {
+        "time": "14:49",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.72
+      },
+      {
+        "time": "14:49",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.72
+      },
+      {
+        "time": "14:50",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.96
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.96
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.96
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.95
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.95
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.74
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.74
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.74
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.74
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -0.74
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.17
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.17
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.17
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.17
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.52
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.46
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.35
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.2
+      },
+      {
+        "time": "14:57",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -1.51
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.5
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.51
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.51
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.51
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.19
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.62
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.62
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.62
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.62
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.62
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.52
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.52
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.47
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.47
+      },
+      {
+        "time": "15:02",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.47
+      },
+      {
+        "time": "15:05",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:05",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:05",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:05",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:05",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "17:17",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "17:17",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "17:17",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "17:17",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "17:17",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "17:32",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "17:42",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "17:43",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "18:25",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 8.0
+      },
+      {
+        "time": "22:07",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 7.07
+      },
+      {
+        "time": "22:35",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "22:38",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "22:39",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 6.0
+      },
+      {
+        "time": "23:03",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "23:03",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "23:09",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.65
+      },
+      {
+        "time": "23:09",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.65
+      },
+      {
+        "time": "23:09",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.65
+      },
+      {
+        "time": "23:09",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.59
+      },
+      {
+        "time": "23:09",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -5.65
+      },
+      {
+        "time": "23:17",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "23:28",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.0
+      }
+    ]
+  },
+  "2026-08-14": {
+    "pnl": 14.97,
+    "trades": [
+      {
+        "time": "00:12",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "00:12",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "00:12",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "00:15",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 1.92
+      },
+      {
+        "time": "00:22",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 3.92
+      },
+      {
+        "time": "00:26",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 5.92
+      },
+      {
+        "time": "00:26",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 7.92
+      },
+      {
+        "time": "06:00",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 18.39
+      },
+      {
+        "time": "06:00",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.58
+      },
+      {
+        "time": "06:00",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.58
+      },
+      {
+        "time": "06:00",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.58
+      },
+      {
+        "time": "06:00",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.58
+      },
+      {
+        "time": "06:00",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.58
+      },
+      {
+        "time": "06:12",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.05
+      },
+      {
+        "time": "06:47",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.05
+      },
+      {
+        "time": "07:03",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 6.05
+      },
+      {
+        "time": "07:41",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 8.05
+      },
+      {
+        "time": "11:35",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 30.77
+      },
+      {
+        "time": "11:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.02
+      },
+      {
+        "time": "11:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.02
+      },
+      {
+        "time": "11:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.02
+      },
+      {
+        "time": "11:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.02
+      },
+      {
+        "time": "11:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.02
+      },
+      {
+        "time": "11:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.4
+      },
+      {
+        "time": "11:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.4
+      },
+      {
+        "time": "11:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.4
+      },
+      {
+        "time": "11:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.4
+      },
+      {
+        "time": "11:37",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.4
+      },
+      {
+        "time": "11:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.61
+      },
+      {
+        "time": "11:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.61
+      },
+      {
+        "time": "11:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.61
+      },
+      {
+        "time": "11:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.61
+      },
+      {
+        "time": "11:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.61
+      },
+      {
+        "time": "11:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.98
+      },
+      {
+        "time": "11:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.98
+      },
+      {
+        "time": "11:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.98
+      },
+      {
+        "time": "11:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.98
+      },
+      {
+        "time": "11:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.98
+      },
+      {
+        "time": "11:45",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.14
+      },
+      {
+        "time": "11:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.3
+      },
+      {
+        "time": "11:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.3
+      },
+      {
+        "time": "11:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.3
+      },
+      {
+        "time": "11:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.3
+      },
+      {
+        "time": "11:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.3
+      },
+      {
+        "time": "11:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.68
+      },
+      {
+        "time": "11:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.68
+      },
+      {
+        "time": "11:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.68
+      },
+      {
+        "time": "11:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.68
+      },
+      {
+        "time": "11:48",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.68
+      },
+      {
+        "time": "11:50",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "11:52",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "11:59",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 6.16
+      },
+      {
+        "time": "12:00",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 8.16
+      },
+      {
+        "time": "12:20",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.44
+      },
+      {
+        "time": "12:20",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.44
+      },
+      {
+        "time": "12:20",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.44
+      },
+      {
+        "time": "12:20",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.44
+      },
+      {
+        "time": "12:20",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.44
+      },
+      {
+        "time": "12:20",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 13.22
+      },
+      {
+        "time": "12:28",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.39
+      },
+      {
+        "time": "12:28",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.39
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.86
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.79
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.79
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.92
+      },
+      {
+        "time": "12:29",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.74
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.65
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.65
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.72
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.9
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.9
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.61
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.61
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.74
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.74
+      },
+      {
+        "time": "12:33",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.74
+      },
+      {
+        "time": "12:34",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.97
+      },
+      {
+        "time": "12:34",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.97
+      },
+      {
+        "time": "12:34",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.97
+      },
+      {
+        "time": "12:34",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.97
+      },
+      {
+        "time": "12:34",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.86
+      },
+      {
+        "time": "12:34",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.91
+      },
+      {
+        "time": "12:34",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.85
+      },
+      {
+        "time": "12:34",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.85
+      },
+      {
+        "time": "12:34",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.85
+      },
+      {
+        "time": "12:34",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.72
+      },
+      {
+        "time": "13:23",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "13:25",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "13:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.91
+      },
+      {
+        "time": "13:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.91
+      },
+      {
+        "time": "13:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.91
+      },
+      {
+        "time": "13:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.91
+      },
+      {
+        "time": "13:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.91
+      },
+      {
+        "time": "13:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.7
+      },
+      {
+        "time": "13:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.7
+      },
+      {
+        "time": "13:26",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.7
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.64
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.7
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.7
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.7
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.7
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.15
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.15
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.15
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.15
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.15
+      },
+      {
+        "time": "13:42",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "13:49",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "13:49",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "13:49",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "13:49",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "14:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.03
+      },
+      {
+        "time": "14:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.02
+      },
+      {
+        "time": "14:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.03
+      },
+      {
+        "time": "14:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.03
+      },
+      {
+        "time": "14:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.03
+      },
+      {
+        "time": "14:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.02
+      },
+      {
+        "time": "14:12",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "14:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.29
+      },
+      {
+        "time": "14:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.47
+      },
+      {
+        "time": "14:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.35
+      },
+      {
+        "time": "14:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.29
+      },
+      {
+        "time": "14:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.2
+      },
+      {
+        "time": "14:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.56
+      },
+      {
+        "time": "14:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.5
+      },
+      {
+        "time": "14:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.5
+      },
+      {
+        "time": "14:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.5
+      },
+      {
+        "time": "15:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.56
+      },
+      {
+        "time": "15:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.56
+      },
+      {
+        "time": "15:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.68
+      },
+      {
+        "time": "15:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.79
+      },
+      {
+        "time": "15:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.79
+      },
+      {
+        "time": "15:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.68
+      },
+      {
+        "time": "15:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.68
+      },
+      {
+        "time": "15:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.53
+      },
+      {
+        "time": "15:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.53
+      },
+      {
+        "time": "15:13",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.53
+      },
+      {
+        "time": "15:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.82
+      },
+      {
+        "time": "15:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.82
+      },
+      {
+        "time": "15:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.82
+      },
+      {
+        "time": "15:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.82
+      },
+      {
+        "time": "15:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.82
+      },
+      {
+        "time": "15:16",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "15:17",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "15:22",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -6.91
+      },
+      {
+        "time": "15:22",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -6.91
+      },
+      {
+        "time": "15:22",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -6.91
+      },
+      {
+        "time": "15:22",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -6.91
+      },
+      {
+        "time": "15:22",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -6.91
+      },
+      {
+        "time": "15:22",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.21
+      },
+      {
+        "time": "15:22",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.21
+      },
+      {
+        "time": "15:22",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.15
+      },
+      {
+        "time": "15:22",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -4.15
+      },
+      {
+        "time": "15:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "15:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "15:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "15:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "15:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.33
+      },
+      {
+        "time": "15:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.33
+      },
+      {
+        "time": "15:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.33
+      },
+      {
+        "time": "15:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.33
+      },
+      {
+        "time": "15:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.33
+      },
+      {
+        "time": "15:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 3.33
+      },
+      {
+        "time": "15:45",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.19
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.24
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.3
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.3
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.3
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.47
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.47
+      },
+      {
+        "time": "15:46",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.47
+      },
+      {
+        "time": "15:47",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.43
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.43
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.43
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.44
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -1.44
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -2.49
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -2.49
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -2.49
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -2.49
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -2.49
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.84
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.84
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.84
+      },
+      {
+        "time": "15:57",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.84
+      },
+      {
+        "time": "16:01",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "16:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.11
+      },
+      {
+        "time": "16:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.11
+      },
+      {
+        "time": "16:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.11
+      },
+      {
+        "time": "16:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.11
+      },
+      {
+        "time": "16:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.11
+      },
+      {
+        "time": "16:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.56
+      },
+      {
+        "time": "16:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.56
+      },
+      {
+        "time": "16:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.56
+      },
+      {
+        "time": "16:04",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -3.56
+      },
+      {
+        "time": "16:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "16:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "16:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "16:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "16:30",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -5.5
+      },
+      {
+        "time": "17:42",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "17:46",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "18:29",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 1.0
+      },
+      {
+        "time": "18:32",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": -0.88
+      },
+      {
+        "time": "18:38",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 2.0
+      },
+      {
+        "time": "18:39",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 4.0
+      },
+      {
+        "time": "18:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.03
+      },
+      {
+        "time": "18:43",
+        "symbol": "XAUUSD",
+        "type": "SELL",
+        "lot": 0.01,
+        "profit": 0.2
+      }
+    ]
+  }
+}
