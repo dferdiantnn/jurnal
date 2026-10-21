@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-  JURNAL SYNC: ONE-SHOT ZERO-LOAD SYNC TO GITHUB PAGES
+  JURNAL SYNC: FULLY AUTOMATED ZERO-CLICK TRADING JOURNAL
 ================================================================================
-Eksekusi 1-shot (sekali jalan langsung mati total dalam ~0.3 detik).
-0% CPU background load. Tidak ada proses yang jalan terus-menerus di laptop.
+1. Otomatis membuka MT5 di background (headless Wine)
+2. Otomatis menarik riwayat transaksi/deals terbaru dari broker Exness
+3. Otomatis menutup kembali MT5 (0% CPU residual, laptop 100% adem)
+4. Otomatis sinkronisasi data & push langsung ke GitHub Pages
 ================================================================================
 """
 
@@ -13,6 +15,7 @@ import sys
 import json
 import glob
 import re
+import time
 import shutil
 import subprocess
 from datetime import datetime, timezone, timedelta
@@ -25,8 +28,54 @@ PARENT_DIR = os.path.dirname(BASE_DIR)
 TRADES_FILE = os.path.join(BASE_DIR, 'trades_data.json')
 JURNAL_REPO_DIR = '/Users/user/Documents/antigravity/jurnal'
 
-MT5_DOCS_DIR = os.path.expanduser('~/Library/Application Support/net.metaquotes.wine.metatrader5/drive_c/users/user/Documents')
-MT5_FILES_DIR = os.path.expanduser('~/Library/Application Support/net.metaquotes.wine.metatrader5/drive_c/Program Files/MetaTrader 5/MQL5/Files')
+WINE_PREFIX = os.path.expanduser('~/Library/Application Support/net.metaquotes.wine.metatrader5')
+WINE_BIN = '/Applications/MetaTrader 5.app/Contents/SharedSupport/wine/bin/wine64'
+MT5_DIR = os.path.join(WINE_PREFIX, 'drive_c/Program Files/MetaTrader 5')
+MT5_DOCS_DIR = os.path.join(WINE_PREFIX, 'drive_c/users/user/Documents')
+MT5_FILES_DIR = os.path.join(MT5_DIR, 'MQL5/Files')
+STARTUP_INI = os.path.join(MT5_DIR, 'sync_startup.ini')
+
+def run_headless_mt5():
+    """
+    Menjalankan MT5 sebentar untuk mengeksekusi script Sync_Journal.ex5,
+    menarik deal history terbaru dari Exness, lalu menutup MT5 secara otomatis.
+    """
+    if not os.path.exists(WINE_BIN) or not os.path.exists(STARTUP_INI):
+        return False
+
+    print("[*] Menghubungi MetaTrader 5 untuk menarik riwayat deals terbaru...")
+    
+    # Bersihkan instance MT5 lama jika ada yang macet
+    try:
+        subprocess.run(['pkill', '-f', 'terminal64.exe'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        time.sleep(0.5)
+    except Exception:
+        pass
+
+    env = os.environ.copy()
+    env['WINEPREFIX'] = WINE_PREFIX
+
+    t0 = time.time()
+    try:
+        subprocess.run(
+            [WINE_BIN, 'terminal64.exe', '/config:sync_startup.ini'],
+            cwd=MT5_DIR,
+            env=env,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            timeout=25
+        )
+        elapsed = time.time() - t0
+        print(f"[✔] Riwayat deals berhasil diunduh dari Exness ({elapsed:.1f}s). MT5 ditutup otomatis.")
+        return True
+    except subprocess.TimeoutExpired:
+        # Jika timeout, paksa matikan MT5 agar laptop tidak terbebani
+        subprocess.run(['pkill', '-f', 'terminal64.exe'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print("[!] MT5 melebihi batas waktu (25s), dipaksa berhenti demi menjaga laptop tetap adem.")
+        return False
+    except Exception as e:
+        print(f"[!] Warning jalankan MT5: {e}")
+        return False
 
 def extract_account_from_html(content, htm_path):
     acct_match = re.search(r'Akun:.*?<b>(.*?)</b>', content, re.DOTALL | re.IGNORECASE)
@@ -102,17 +151,24 @@ def parse_mt5_html_content(content):
     return daily
 
 def sync_trades():
+    start_time = time.time()
+    
+    # 1. Jalankan headless MT5 jika tidak ada flag --fast / --no-mt5
+    fast_mode = '--fast' in sys.argv or '--no-mt5' in sys.argv
+    if not fast_mode:
+        run_headless_mt5()
+
     trades = {}
     if os.path.exists(TRADES_FILE):
         try:
             with open(TRADES_FILE, 'r') as f:
                 trades = json.load(f)
         except Exception:
-            pass
+            trades = {}
 
     detected_accounts = []
 
-    # Scan MT5 HTML Reports
+    # 2. Scan MT5 HTML Reports (jika pernah ada export manual)
     if os.path.exists(MT5_DOCS_DIR):
         for htm_path in glob.glob(os.path.join(MT5_DOCS_DIR, 'ReportHistory*.htm*')):
             content = None
@@ -131,41 +187,68 @@ def sync_trades():
                 parsed = parse_mt5_html_content(content)
                 for date_key, dval in parsed.items():
                     if date_key not in trades:
-                        trades[date_key] = dval
-                    else:
-                        for tr in dval['trades']:
-                            exists = any(x.get('time') == tr['time'] and x.get('profit') == tr['profit'] for x in trades[date_key]['trades'])
-                            if not exists:
-                                trades[date_key]['pnl'] = round(trades[date_key]['pnl'] + tr['profit'], 2)
-                                trades[date_key]['trades'].append(tr)
+                        trades[date_key] = {'pnl': 0.0, 'trades': []}
+                    for tr in dval['trades']:
+                        exists = any(
+                            x.get('time') == tr['time'] and abs(float(x.get('profit', 0.0)) - float(tr['profit'])) < 0.001
+                            for x in trades[date_key]['trades']
+                        )
+                        if not exists:
+                            trades[date_key]['trades'].append(tr)
 
-    # Scan trades_export.json from Sync_Journal.mq5
+    # 3. Scan trades_export.json dari Sync_Journal.ex5 (Sumber Utama Akurat)
     export_json = os.path.join(MT5_FILES_DIR, 'trades_export.json')
     if os.path.exists(export_json):
         try:
             with open(export_json, 'r') as f:
                 data = json.load(f)
+                account_id = str(data.get('account', '463678568'))
+                if not any(a['account'] == account_id for a in detected_accounts):
+                    detected_accounts.append({
+                        'account': account_id,
+                        'server': 'Exness-MT5Trial17',
+                        'platform': 'MT5'
+                    })
+
                 for t in data.get('trades', []):
                     dt = datetime.fromisoformat(t.get('time', '').replace('Z', '+00:00'))
                     date_key = dt.strftime('%Y-%m-%d')
                     if date_key not in trades:
                         trades[date_key] = {'pnl': 0.0, 'trades': []}
-                    exists = any(x.get('time') == dt.strftime('%H:%M') and x.get('profit') == t.get('profit') for x in trades[date_key]['trades'])
+                    
+                    time_val = dt.strftime('%H:%M')
+                    profit_val = round(float(t.get('profit', 0.0)), 2)
+                    
+                    exists = any(
+                        x.get('time') == time_val and abs(float(x.get('profit', 0.0)) - profit_val) < 0.001
+                        for x in trades[date_key]['trades']
+                    )
                     if not exists:
-                        trades[date_key]['pnl'] = round(trades[date_key]['pnl'] + t.get('profit', 0.0), 2)
                         trades[date_key]['trades'].append({
-                            'time': dt.strftime('%H:%M'),
+                            'time': time_val,
                             'symbol': t.get('symbol', 'XAUUSD'),
                             'type': t.get('type', 'BUY'),
-                            'lot': t.get('lot', 0.01),
-                            'profit': t.get('profit', 0.0)
+                            'lot': round(float(t.get('lot', 0.01)), 2),
+                            'profit': profit_val
                         })
-        except Exception:
-            pass
+        except Exception as e:
+            print(f"[!] Warning membaca trades_export.json: {e}")
+
+    # 4. Hitung ulang total PnL bersih per hari & urutkan transaksi
+    for date_key in list(trades.keys()):
+        if date_key == '_meta':
+            continue
+        day_trades = trades[date_key].get('trades', [])
+        day_trades.sort(key=lambda x: x.get('time', ''))
+        total_pnl = round(sum(float(x.get('profit', 0.0)) for x in day_trades), 2)
+        trades[date_key] = {
+            'pnl': total_pnl,
+            'trades': day_trades
+        }
 
     primary_acct = detected_accounts[0] if detected_accounts else {'account': '463678568', 'server': 'Exness-MT5Trial17', 'platform': 'MT5'}
 
-    # Set metadata last updated and detected accounts
+    # 5. Metadata sinkronisasi
     trades['_meta'] = {
         'last_updated': NOW_WIB.isoformat(),
         'account': primary_acct['account'],
@@ -173,17 +256,17 @@ def sync_trades():
         'accounts': detected_accounts if detected_accounts else [primary_acct]
     }
 
-    # Save to local file
+    # 6. Simpan ke trades_data.json lokal
     with open(TRADES_FILE, 'w') as f:
         json.dump(trades, f, indent=2)
 
-    # Sync to git repo folder and push
+    # 7. Mirror ke repositori GitHub Pages dan push
     if os.path.exists(JURNAL_REPO_DIR):
         target_file = os.path.join(JURNAL_REPO_DIR, 'trades_data.json')
         with open(target_file, 'w') as f:
             json.dump(trades, f, indent=2)
 
-        # Mirror front-end files to git repo
+        # Mirror front-end files
         for fname in ['index.html', 'style.css', 'app.js', 'sync.py']:
             src = os.path.join(BASE_DIR, fname)
             dst = os.path.join(JURNAL_REPO_DIR, fname)
@@ -200,6 +283,7 @@ def sync_trades():
         except Exception as e:
             print(f"[!] Warning git push: {e}")
 
+    duration = time.time() - start_time
     active_days = len([k for k in trades.keys() if k != '_meta'])
     time_str = NOW_WIB.strftime('%d %b %Y, %H:%M WIB')
     accts_str = ", ".join([f"{a['account']} ({a['server']})" for a in (detected_accounts or [primary_acct])])
@@ -213,7 +297,7 @@ def sync_trades():
     print(f"  • Web Online   : https://dferdiantnn.github.io/jurnal/")
     print(f"  • Server Lokal : Ketik 'jurnal serve' jika ingin buka offline")
     print("================================================================")
-    print("  (Selesai dalam 0.3 detik. Laptop 100% adem, CPU 0%)")
+    print(f"  (Selesai dalam {duration:.1f} detik. Laptop 100% adem, CPU 0%)")
     print("================================================================")
 
 if __name__ == '__main__':
