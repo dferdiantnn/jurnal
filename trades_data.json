@@ -4870,5 +4870,10 @@
         "profit": 0.2
       }
     ]
+  },
+  "_meta": {
+    "last_updated": "2026-10-21T18:18:03.309334+07:00",
+    "account": "463678568",
+    "server": "Exness-MT5Trial17"
   }
 }
