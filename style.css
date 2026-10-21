@@ -1,33 +1,45 @@
 /* ==========================================================================
    EXNESS XAUUSD TRADING PNL CALENDAR JOURNAL
-   Pixel-Perfect Dark Mode Match with Infinite Vertical Chronological Scroll
+   Hellenic-Cybernetic Aesthetic (Matching dferdiantn.vercel.app)
+   Deep Primordial Dark #070908 · Ancient Gold #D9A441 · Bone Ivory #E4E8DC
    ========================================================================== */
 
 :root {
-  --bg-app: #08090C;
-  --bg-card: #0F1218;
-  --bg-card-hover: #151922;
-  --border-subtle: rgba(255, 255, 255, 0.06);
+  --bg-app: #070908;
+  --bg-surface: #0B0E0B;
+  --bg-card: #0A0D0A;
+  --bg-card-hover: #121812;
+  --border-subtle: rgba(217, 164, 65, 0.14);
+  --border-card: #1C2419;
+  --border-gold: rgba(217, 164, 65, 0.35);
 
-  /* Profit Colors (Electric Cyan Blue matching screenshot) */
-  --profit-text: #00D2FF;
-  --profit-bg: #091D2C;
-  --profit-border: rgba(0, 210, 255, 0.2);
+  /* Hellenic Gold Accents from dferdiantn.vercel.app */
+  --accent-gold: #D9A441;
+  --accent-gold-bright: #FFD768;
+  --accent-olive: #3E4A35;
 
-  /* Loss Colors (Vibrant Crimson Red matching screenshot) */
-  --loss-text: #FF4D6D;
-  --loss-bg: #270D13;
-  --loss-border: rgba(255, 77, 109, 0.2);
+  /* Profit Colors (Emerald / Greek Laurel Green) */
+  --profit-text: #34D399;
+  --profit-bg: rgba(52, 211, 153, 0.08);
+  --profit-border: rgba(52, 211, 153, 0.25);
+
+  /* Loss Colors (Ancient Fire Crimson / Ember Red) */
+  --loss-text: #F87171;
+  --loss-bg: rgba(248, 113, 113, 0.08);
+  --loss-border: rgba(248, 113, 113, 0.25);
 
   /* Neutral / Zero Colors */
-  --neutral-text: #8E98A8;
-  --neutral-bg: #12151D;
-  --neutral-border: rgba(255, 255, 255, 0.04);
+  --neutral-text: #8FA67C;
+  --neutral-bg: #0A0D0A;
+  --neutral-border: rgba(255, 255, 255, 0.03);
 
-  /* Day Header & Muted Text */
-  --text-primary: #F1F5F9;
-  --text-muted: #64748B;
-  --text-dim: #475569;
+  /* Text Colors */
+  --text-primary: #E4E8DC;
+  --text-muted: #8FA67C;
+  --text-dim: #5C6E52;
+
+  --font-serif: 'Cinzel', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 * {
@@ -37,14 +49,36 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+::selection {
+  background: #3E4A35;
+  color: #E4E8DC;
+}
+
 body {
   background-color: var(--bg-app);
   color: var(--text-primary);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-serif);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  letter-spacing: 0.2px;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070908;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F271B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3E4A35;
 }
 
 /* ==========================================================================
@@ -54,10 +88,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(8, 9, 12, 0.90);
+  background: rgba(7, 9, 8, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(217, 164, 65, 0.16);
   padding: 10px 18px;
   display: flex;
   align-items: center;
@@ -72,39 +106,41 @@ body {
 }
 
 .nav-symbol {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-serif);
   font-weight: 800;
-  font-size: 13.5px;
-  letter-spacing: 0.5px;
-  color: #F8FAFC;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: var(--text-primary);
 }
 
 .nav-divider {
-  color: #334155;
+  color: #3E4A35;
   font-size: 11px;
 }
 
 .nav-account {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 10.5px;
   font-weight: 700;
-  color: #10B981;
+  color: var(--accent-gold);
+  letter-spacing: 0.5px;
 }
 
 .nav-badge {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  color: #64748B;
-  background: rgba(255, 255, 255, 0.04);
+  font-family: var(--font-serif);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: rgba(62, 74, 53, 0.2);
   padding: 3px 8px;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(217, 164, 65, 0.22);
+  letter-spacing: 0.8px;
 }
 
 .btn-menu {
-  background: #11151F;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0C100C;
+  border: 1px solid rgba(217, 164, 65, 0.2);
   border-radius: 8px;
   width: 38px;
   height: 38px;
@@ -116,8 +152,8 @@ body {
   flex-shrink: 0;
 }
 .btn-menu:hover {
-  background: #1A2234;
-  border-color: #38BDF8;
+  background: #141C14;
+  border-color: var(--accent-gold);
 }
 
 .nav-right {
@@ -130,29 +166,29 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #0E131F;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0B0E0B;
+  border: 1px solid rgba(217, 164, 65, 0.2);
   border-radius: 6px;
   padding: 5px 9px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 500;
-  color: #94A3B8;
+  color: var(--text-muted);
   cursor: default;
   transition: all 0.2s ease;
   user-select: none;
 }
 .nav-last-updated:hover {
-  border-color: rgba(56, 189, 248, 0.3);
-  color: #E2E8F0;
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
 }
 
 .status-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #10B981;
-  box-shadow: 0 0 6px rgba(16, 185, 129, 0.7);
+  background: #34D399;
+  box-shadow: 0 0 6px rgba(52, 211, 153, 0.7);
   flex-shrink: 0;
 }
 
@@ -208,17 +244,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #0E131F;
+  background: #0B0E0B;
   padding: 8px 12px;
   border-radius: 10px;
-  border: 1px solid #1E293B;
+  border: 1px solid rgba(217, 164, 65, 0.2);
   margin-bottom: 6px;
 }
 
 .btn-year-nav {
-  background: #141A28;
-  border: 1px solid #2B3B55;
-  color: #94A3B8;
+  background: #111611;
+  border: 1px solid rgba(217, 164, 65, 0.25);
+  color: var(--text-primary);
   border-radius: 6px;
   width: 28px;
   height: 28px;
@@ -230,16 +266,17 @@ body {
   transition: all 0.2s ease;
 }
 .btn-year-nav:hover {
-  background: #1E2638;
-  color: #F8FAFC;
-  border-color: #38BDF8;
+  background: #1A241A;
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
 }
 
 .active-year-display {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-serif);
   font-weight: 800;
   font-size: 16px;
-  color: #F8FAFC;
+  letter-spacing: 1.5px;
+  color: var(--accent-gold);
   min-width: 44px;
   text-align: center;
 }
@@ -247,25 +284,27 @@ body {
 .semester-tabs {
   display: flex;
   gap: 6px;
-  background: #080A10;
+  background: #070908;
   padding: 4px;
   border-radius: 10px;
-  border: 1px solid #1A2234;
+  border: 1px solid rgba(217, 164, 65, 0.15);
 }
 
 .semester-tab {
   background: transparent;
   border: none;
-  color: #94A3B8;
+  color: var(--text-muted);
   padding: 6px 14px;
   border-radius: 7px;
-  font-size: 12px;
+  font-family: var(--font-serif);
+  font-size: 11.5px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   gap: 5px;
+  letter-spacing: 0.5px;
 }
 
 .semester-tab .tab-sub {
@@ -275,16 +314,17 @@ body {
 }
 
 .semester-tab:hover {
-  color: #F8FAFC;
+  color: var(--text-primary);
 }
 
 .semester-tab.active {
-  background: #1E293B;
-  color: #00D2FF;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  background: rgba(62, 74, 53, 0.35);
+  color: var(--accent-gold);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  border: 1px solid var(--accent-gold);
 }
 .semester-tab.active .tab-sub {
-  color: #38BDF8;
+  color: var(--accent-gold-bright);
   opacity: 0.9;
 }
 
@@ -488,40 +528,43 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 4px;
-  border-bottom: 1px solid var(--border-subtle);
+  padding: 10px 4px;
+  border-bottom: 1px solid rgba(217, 164, 65, 0.2);
 }
 
 .month-title-wrap {
   display: flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 12px;
 }
 
 .month-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 22px;
+  font-family: var(--font-serif);
+  font-size: 20px;
   font-weight: 800;
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
   color: var(--text-primary);
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .month-year {
-  font-size: 15px;
+  font-family: var(--font-serif);
+  font-size: 13.5px;
   font-weight: 600;
-  color: var(--text-muted);
+  letter-spacing: 1px;
+  color: var(--accent-gold);
 }
 
 .month-summary-badge {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
   font-weight: 700;
   padding: 4px 10px;
   border-radius: 6px;
   display: flex;
   align-items: center;
   gap: 6px;
+  letter-spacing: 0.2px;
 }
 
 .month-summary-badge.profit {
@@ -546,11 +589,12 @@ body {
 }
 
 .weekday-col {
-  font-size: 13px;
-  font-weight: 600;
-  color: #555E6D;
-  text-transform: capitalize;
-  letter-spacing: 0.2px;
+  font-family: var(--font-serif);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
 
 /* Days 7-Column Calendar Grid */
@@ -560,7 +604,7 @@ body {
   gap: 8px;
 }
 
-/* Individual Day Tile (Exact match with user's screenshot) */
+/* Individual Day Tile */
 .day-cell {
   background-color: var(--neutral-bg);
   border: 1px solid var(--neutral-border);
@@ -572,13 +616,14 @@ body {
   justify-content: space-between;
   min-height: 64px;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
   user-select: none;
 }
 
 .day-cell:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 10px rgba(217, 164, 65, 0.15);
 }
 
 .day-cell.empty {
@@ -590,20 +635,23 @@ body {
 .day-cell.empty:hover {
   transform: none;
   box-shadow: none;
+  border-color: transparent;
 }
 
 /* Day Number (01, 02, ... 31) */
 .day-num {
-  font-size: 14px;
-  font-weight: 600;
-  color: #C0C8D4;
+  font-family: var(--font-serif);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-muted);
   line-height: 1;
   margin-bottom: 6px;
+  letter-spacing: 0.5px;
 }
 
 /* PnL Value Text (+2.42M, -1.41M, 0.00) */
 .day-pnl {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 11.5px;
   font-weight: 700;
   line-height: 1.1;
@@ -619,6 +667,9 @@ body {
 .day-cell.is-profit .day-pnl {
   color: var(--profit-text);
 }
+.day-cell.is-profit .day-num {
+  color: var(--text-primary);
+}
 
 /* LOSS STATE */
 .day-cell.is-loss {
@@ -628,6 +679,9 @@ body {
 .day-cell.is-loss .day-pnl {
   color: var(--loss-text);
 }
+.day-cell.is-loss .day-num {
+  color: var(--text-primary);
+}
 
 /* ZERO / NO TRADES STATE */
 .day-cell.is-zero {
@@ -635,13 +689,14 @@ body {
   border-color: var(--neutral-border);
 }
 .day-cell.is-zero .day-pnl {
-  color: var(--neutral-text);
+  color: var(--text-dim);
 }
 
 /* TODAY INDICATOR HIGHLIGHT */
 .day-cell.is-today {
-  outline: 1.5px solid #FFD700;
+  outline: 1.5px solid var(--accent-gold);
   outline-offset: -1px;
+  box-shadow: 0 0 8px rgba(217, 164, 65, 0.25);
 }
 
 /* ==========================================================================
@@ -666,12 +721,12 @@ body {
 }
 
 .modal-card {
-  background: #11141D;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #090C09;
+  border: 1px solid rgba(217, 164, 65, 0.3);
   border-radius: 16px;
   width: 100%;
   max-width: 440px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 25px rgba(217, 164, 65, 0.1);
   overflow: hidden;
   animation: modalPop 0.2s ease;
 }
@@ -683,21 +738,26 @@ body {
 
 .modal-header {
   padding: 16px 20px;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid rgba(217, 164, 65, 0.18);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #0C100C;
 }
 
 .modal-header h3 {
+  font-family: var(--font-serif);
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-primary);
+  letter-spacing: 1px;
 }
 
 .modal-subtitle {
-  font-size: 12px;
+  font-family: var(--font-serif);
+  font-size: 11.5px;
   color: var(--text-muted);
+  letter-spacing: 0.5px;
 }
 
 .modal-close {
@@ -708,6 +768,9 @@ body {
   cursor: pointer;
   line-height: 1;
 }
+.modal-close:hover {
+  color: var(--text-primary);
+}
 
 .modal-body {
   padding: 20px;
@@ -717,8 +780,8 @@ body {
 }
 
 .modal-pnl-banner {
-  background: var(--neutral-bg);
-  border: 1px solid var(--border-subtle);
+  background: #0C100C;
+  border: 1px solid rgba(217, 164, 65, 0.25);
   border-radius: 12px;
   padding: 14px;
   display: flex;
@@ -727,13 +790,15 @@ body {
 }
 
 .modal-pnl-label {
-  font-size: 13px;
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-size: 12.5px;
+  font-weight: 700;
   color: var(--text-muted);
+  letter-spacing: 0.8px;
 }
 
 .modal-pnl-val {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 20px;
   font-weight: 800;
 }
@@ -747,8 +812,8 @@ body {
 }
 
 .trade-row {
-  background: #151922;
-  border: 1px solid var(--border-subtle);
+  background: #0B0E0B;
+  border: 1px solid rgba(217, 164, 65, 0.15);
   border-radius: 8px;
   padding: 10px 12px;
   display: flex;
@@ -762,8 +827,10 @@ body {
 }
 
 .trade-type {
-  font-size: 13px;
+  font-family: var(--font-serif);
+  font-size: 12.5px;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 .trade-type.buy { color: var(--profit-text); }
 .trade-type.sell { color: var(--loss-text); }
@@ -771,11 +838,11 @@ body {
 .trade-time {
   font-size: 11px;
   color: var(--text-muted);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
 }
 
 .trade-profit {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 14px;
   font-weight: 700;
 }
@@ -853,8 +920,8 @@ body {
   display: none;
 }
 .drop-box {
-  border: 2px dashed #00D2FF;
-  background: #0E131F;
+  border: 2px dashed var(--accent-gold);
+  background: #0B0E0B;
   border-radius: 16px;
   padding: 40px;
   text-align: center;
@@ -867,13 +934,14 @@ body {
   margin-bottom: 16px;
 }
 .drop-box h3 {
+  font-family: var(--font-serif);
   font-size: 18px;
-  color: #F8FAFC;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 .drop-box p {
   font-size: 13px;
-  color: #94A3B8;
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
@@ -881,16 +949,18 @@ body {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  background: #141A26;
-  border: 1px solid #00D2FF;
-  color: #F8FAFC;
+  background: #0B0E0B;
+  border: 1px solid var(--accent-gold);
+  color: var(--text-primary);
   padding: 12px 18px;
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  font-size: 13px;
-  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7), 0 0 15px rgba(217, 164, 65, 0.2);
+  font-size: 12.5px;
+  font-family: var(--font-serif);
+  font-weight: 700;
   z-index: 1100;
   animation: slideUp 0.3s ease;
+  letter-spacing: 0.5px;
 }
 .toast-notification.hidden {
   display: none;
@@ -902,8 +972,8 @@ body {
 }
 
 .safety-banner {
-  background: rgba(16, 185, 129, 0.08);
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  background: rgba(62, 74, 53, 0.25);
+  border: 1px solid rgba(217, 164, 65, 0.25);
   border-radius: 10px;
   padding: 12px 14px;
   display: flex;
@@ -911,13 +981,14 @@ body {
   gap: 12px;
   font-size: 12px;
   line-height: 1.4;
-  color: #CBD5E1;
+  color: var(--text-muted);
 }
 .safety-banner .shield-icon {
   font-size: 20px;
 }
 .safety-banner b {
-  color: #6EE7B7;
+  color: var(--accent-gold);
+  font-family: var(--font-serif);
   display: block;
   margin-bottom: 2px;
 }
@@ -929,10 +1000,11 @@ body {
 }
 
 .form-label {
-  font-size: 12px;
+  font-family: var(--font-serif);
+  font-size: 11.5px;
   font-weight: 700;
-  color: #94A3B8;
-  letter-spacing: 0.3px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
 }
 
 .broker-presets {
@@ -942,23 +1014,24 @@ body {
 }
 
 .preset-btn {
-  background: #161B26;
-  border: 1px solid var(--border-subtle);
+  background: #0B0E0B;
+  border: 1px solid rgba(217, 164, 65, 0.2);
   color: var(--text-primary);
   border-radius: 8px;
   padding: 6px 12px;
-  font-size: 12px;
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-size: 11.5px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 .preset-btn:hover {
-  background: #202738;
+  border-color: var(--accent-gold);
 }
 .preset-btn.active {
-  background: #00D2FF;
-  color: #061118;
-  border-color: #00D2FF;
+  background: var(--accent-gold);
+  color: #070908;
+  border-color: var(--accent-gold);
   font-weight: 800;
 }
 
@@ -969,8 +1042,8 @@ body {
 
 .radio-tab {
   flex: 1;
-  background: #141822;
-  border: 1px solid var(--border-subtle);
+  background: #0B0E0B;
+  border: 1px solid rgba(217, 164, 65, 0.2);
   border-radius: 8px;
   padding: 10px;
   display: flex;
@@ -978,49 +1051,52 @@ body {
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-  color: #94A3B8;
+  font-family: var(--font-serif);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
   transition: all 0.2s ease;
 }
 .radio-tab.active {
-  background: #1C2333;
-  border-color: rgba(0, 210, 255, 0.4);
-  color: #00D2FF;
+  background: rgba(62, 74, 53, 0.35);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
 }
 .radio-tab input {
   display: none;
 }
 
 .form-input {
-  background: #0C0F16;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #070908;
+  border: 1px solid rgba(217, 164, 65, 0.25);
   border-radius: 8px;
   padding: 10px 14px;
-  color: #FFFFFF;
-  font-family: inherit;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
   font-size: 13px;
   outline: none;
   transition: border-color 0.2s ease;
 }
 .form-input:focus {
-  border-color: #00D2FF;
-  box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 10px rgba(217, 164, 65, 0.25);
 }
 
 .input-hint {
   font-size: 11px;
-  color: #64748B;
+  color: var(--text-dim);
 }
 
 .btn-submit-broker {
-  background: linear-gradient(135deg, #FFD700, #FFAE00);
+  background: linear-gradient(135deg, #D9A441, #B38226);
   border: none;
   border-radius: 10px;
-  color: #0A0A0A;
+  color: #070908;
   padding: 12px;
-  font-size: 14px;
+  font-family: var(--font-serif);
+  font-size: 13px;
   font-weight: 800;
+  letter-spacing: 1px;
   cursor: pointer;
   margin-top: 6px;
   transition: all 0.2s ease;
@@ -1029,8 +1105,10 @@ body {
   justify-content: center;
 }
 .btn-submit-broker:hover {
-  background: linear-gradient(135deg, #FFE234, #FFBE1A);
+  background: linear-gradient(135deg, #FFD768, #D9A441);
   transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(217, 164, 65, 0.35);
+}
   box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
 }
 
@@ -1048,17 +1126,22 @@ body {
 }
 
 .account-card {
-  background: #161A24;
-  border: 1px solid var(--border-subtle);
+  background: #0B0E0B;
+  border: 1px solid rgba(217, 164, 65, 0.2);
   border-radius: 8px;
   padding: 10px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.2s ease;
+}
+.account-card:hover {
+  border-color: var(--accent-gold);
 }
 .account-card.active {
-  border-color: rgba(16, 185, 129, 0.4);
-  background: rgba(16, 185, 129, 0.05);
+  border-color: var(--accent-gold);
+  background: rgba(62, 74, 53, 0.3);
+  box-shadow: 0 0 10px rgba(217, 164, 65, 0.12);
 }
 
 .account-info {
@@ -1067,28 +1150,32 @@ body {
 }
 
 .account-title {
+  font-family: var(--font-serif);
   font-size: 13px;
   font-weight: 700;
-  color: #F1F5F9;
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 6px;
+  letter-spacing: 0.5px;
 }
 
 .account-server {
   font-size: 11px;
   color: var(--text-muted);
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
 }
 
 .badge-active-acct {
-  background: rgba(16, 185, 129, 0.15);
-  color: #10B981;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: rgba(217, 164, 65, 0.15);
+  color: var(--accent-gold);
+  border: 1px solid rgba(217, 164, 65, 0.3);
   font-size: 10px;
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: 700;
+  font-family: var(--font-serif);
+  letter-spacing: 0.5px;
 }
 
 /* ==========================================================================
@@ -1097,7 +1184,7 @@ body {
 .drawer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.78);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 1050;
@@ -1110,14 +1197,14 @@ body {
 }
 
 .drawer-panel {
-  background: #0A0D15;
-  border-left: 1px solid #1E293B;
+  background: #080B08;
+  border-left: 1px solid rgba(217, 164, 65, 0.22);
   width: 100%;
   max-width: 420px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.8);
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.85);
   animation: slideDrawer 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
 }
@@ -1129,42 +1216,42 @@ body {
 
 .drawer-header {
   padding: 18px 20px;
-  border-bottom: 1px solid #1E293B;
+  border-bottom: 1px solid rgba(217, 164, 65, 0.18);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #0D111A;
+  background: #0B0E0B;
 }
 
 .drawer-title-wrap {
   display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.drawer-icon {
-  font-size: 20px;
+  flex-direction: column;
+  gap: 2px;
 }
 .drawer-header h3 {
+  font-family: var(--font-serif);
   font-size: 16px;
   font-weight: 800;
-  color: #F8FAFC;
+  color: var(--text-primary);
   line-height: 1.2;
+  letter-spacing: 1.2px;
 }
 .drawer-subtitle {
   font-size: 11px;
-  color: #64748B;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
 }
 
 .drawer-close {
   background: transparent;
   border: none;
-  color: #94A3B8;
+  color: var(--text-muted);
   font-size: 24px;
   cursor: pointer;
   line-height: 1;
 }
 .drawer-close:hover {
-  color: #F8FAFC;
+  color: var(--text-primary);
 }
 
 .drawer-body {
@@ -1182,10 +1269,11 @@ body {
 }
 
 .section-title {
-  font-size: 11.5px;
+  font-family: var(--font-serif);
+  font-size: 11px;
   font-weight: 800;
-  color: #94A3B8;
-  letter-spacing: 0.5px;
+  color: var(--accent-gold);
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
@@ -1196,19 +1284,22 @@ body {
 }
 
 .btn-add-acct {
-  background: #182030;
-  border: 1px solid #2B3B55;
-  color: #38BDF8;
+  background: #111711;
+  border: 1px solid rgba(217, 164, 65, 0.25);
+  color: var(--accent-gold);
   border-radius: 6px;
   padding: 4px 10px;
-  font-size: 11px;
+  font-family: var(--font-serif);
+  font-size: 10.5px;
   font-weight: 700;
   cursor: pointer;
+  letter-spacing: 0.5px;
   transition: all 0.2s ease;
 }
 .btn-add-acct:hover {
-  background: #243248;
-  color: #F8FAFC;
+  background: #1A241A;
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
 }
 
 .drawer-stats-grid {
@@ -1218,8 +1309,8 @@ body {
 }
 
 .drawer-stat-card {
-  background: #0F1420;
-  border: 1px solid #1E293B;
+  background: #0B0E0B;
+  border: 1px solid rgba(217, 164, 65, 0.18);
   border-radius: 10px;
   padding: 10px 8px;
   display: flex;
@@ -1230,17 +1321,18 @@ body {
 }
 
 .d-stat-label {
+  font-family: var(--font-serif);
   font-size: 9px;
   font-weight: 800;
-  color: #64748B;
-  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
 }
 
 .d-stat-val {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 700;
-  color: #F8FAFC;
+  color: var(--text-primary);
 }
 .d-stat-val.profit {
   color: var(--profit-text);
@@ -1253,8 +1345,8 @@ body {
 }
 
 .drawer-sem-btn {
-  background: #0F1420;
-  border: 1px solid #1E293B;
+  background: #0B0E0B;
+  border: 1px solid rgba(217, 164, 65, 0.18);
   border-radius: 10px;
   padding: 10px 12px;
   display: flex;
@@ -1264,23 +1356,26 @@ body {
   transition: all 0.2s ease;
 }
 .drawer-sem-btn b {
+  font-family: var(--font-serif);
   font-size: 13px;
-  color: #94A3B8;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
 }
 .drawer-sem-btn small {
   font-size: 10.5px;
-  color: #64748B;
+  color: var(--text-dim);
   margin-top: 2px;
 }
 .drawer-sem-btn:hover {
-  border-color: #38BDF8;
+  border-color: var(--accent-gold);
 }
 .drawer-sem-btn.active {
-  background: rgba(0, 210, 255, 0.08);
-  border-color: #00D2FF;
+  background: rgba(62, 74, 53, 0.35);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 12px rgba(217, 164, 65, 0.15);
 }
 .drawer-sem-btn.active b {
-  color: #00D2FF;
+  color: var(--accent-gold);
 }
 
 .drawer-accounts-list {
@@ -1294,18 +1389,19 @@ body {
 .sync-badge {
   font-size: 10px;
   font-weight: 700;
-  color: #10B981;
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: var(--accent-gold);
+  background: rgba(217, 164, 65, 0.12);
+  border: 1px solid rgba(217, 164, 65, 0.3);
   padding: 2px 7px;
   border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-family: var(--font-serif);
+  letter-spacing: 0.8px;
 }
 
 .sync-info-card {
-  background: #0A0D15;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: #0B0E0B;
+  border: 1px solid rgba(217, 164, 65, 0.18);
   border-radius: 8px;
   padding: 10px 12px;
   margin-bottom: 2px;
@@ -1322,13 +1418,14 @@ body {
 }
 
 .sync-label {
-  color: #64748B;
-  font-weight: 500;
+  color: var(--text-muted);
+  font-family: var(--font-serif);
+  font-size: 11px;
 }
 
 .sync-value {
-  font-family: 'JetBrains Mono', monospace;
-  color: #38BDF8;
+  font-family: var(--font-mono);
+  color: var(--accent-gold);
   font-weight: 600;
 }
 
@@ -1339,10 +1436,35 @@ body {
 }
 
 .drawer-action-btn {
-  background: #0F1420;
-  border: 1px solid #1E293B;
+  background: #0B0E0B;
+  border: 1px solid rgba(217, 164, 65, 0.2);
   border-radius: 10px;
   padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+.drawer-action-btn:hover {
+  background: #141C14;
+  border-color: var(--accent-gold);
+}
+.d-act-text {
+  display: flex;
+  flex-direction: column;
+}
+.d-act-text b {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+.d-act-text small {
+  font-size: 11px;
+  color: var(--text-muted);
+}
   display: flex;
   align-items: center;
   gap: 12px;

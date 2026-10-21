@@ -4872,8 +4872,15 @@
     ]
   },
   "_meta": {
-    "last_updated": "2026-10-21T19:25:32.366896+07:00",
+    "last_updated": "2026-10-21T19:37:20.865141+07:00",
     "account": "463678568",
-    "server": "Exness-MT5Trial17"
+    "server": "Exness-MT5Trial17",
+    "accounts": [
+      {
+        "account": "463678568",
+        "server": "Exness-MT5Trial17",
+        "platform": "MT5"
+      }
+    ]
   }
 }

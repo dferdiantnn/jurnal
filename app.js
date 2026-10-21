@@ -233,7 +233,7 @@ function updateSemesterUI() {
 
   const quickBadge = document.getElementById('quick-semester-badge');
   if (quickBadge) {
-    quickBadge.textContent = `Semester ${STATE.activeSemester} · ${STATE.activeYear}`;
+    quickBadge.textContent = `Semester ${STATE.activeSemester === 1 ? 'I' : 'II'} · ${STATE.activeYear}`;
   }
 }
 
@@ -289,10 +289,10 @@ function openDayModal(dateKey, pnlVal, trades) {
   modalPnlVal.textContent = formatPnL(pnlVal);
   modalPnlVal.className = `modal-pnl-val ${pnlVal > 0 ? 'profit' : (pnlVal < 0 ? 'loss' : '')}`;
   if (pnlVal > 0) {
-    modalPnlBanner.style.borderColor = 'rgba(0, 210, 255, 0.3)';
+    modalPnlBanner.style.borderColor = 'var(--profit-border)';
     modalPnlVal.style.color = 'var(--profit-text)';
   } else if (pnlVal < 0) {
-    modalPnlBanner.style.borderColor = 'rgba(255, 77, 109, 0.3)';
+    modalPnlBanner.style.borderColor = 'var(--loss-border)';
     modalPnlVal.style.color = 'var(--loss-text)';
   } else {
     modalPnlBanner.style.borderColor = 'var(--border-subtle)';
@@ -390,6 +390,17 @@ function updateLastUpdatedDisplay(meta) {
     }
     if (syncBadge) {
       syncBadge.textContent = 'Terbaru';
+    }
+
+    if (meta.accounts && meta.accounts.length > 0) {
+      connectedAccounts = meta.accounts.map(a => ({
+        title: a.server ? a.server.split('-')[0] : 'Exness',
+        platform: a.platform || 'MT5',
+        server: a.server || 'Exness-MT5',
+        login: a.account
+      }));
+      renderConnectedAccounts();
+      updateActiveBrokerUI();
     }
   } else {
     if (navUpdateText) navUpdateText.textContent = `Update: Terbaru`;

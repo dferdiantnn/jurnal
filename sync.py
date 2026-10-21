@@ -28,6 +28,35 @@ JURNAL_REPO_DIR = '/Users/user/Documents/antigravity/jurnal'
 MT5_DOCS_DIR = os.path.expanduser('~/Library/Application Support/net.metaquotes.wine.metatrader5/drive_c/users/user/Documents')
 MT5_FILES_DIR = os.path.expanduser('~/Library/Application Support/net.metaquotes.wine.metatrader5/drive_c/Program Files/MetaTrader 5/MQL5/Files')
 
+def extract_account_from_html(content, htm_path):
+    acct_match = re.search(r'Akun:.*?<b>(.*?)</b>', content, re.DOTALL | re.IGNORECASE)
+    if not acct_match:
+        acct_match = re.search(r'Account:.*?<b>(.*?)</b>', content, re.DOTALL | re.IGNORECASE)
+    
+    login = ""
+    server = ""
+    
+    if acct_match:
+        raw = re.sub(r'<[^>]+>', '', acct_match.group(1)).replace('&nbsp;', ' ').strip()
+        parts = raw.split('(')
+        login = parts[0].strip()
+        if len(parts) > 1:
+            details = [x.strip() for x in parts[1].replace(')', '').split(',')]
+            for d in details:
+                if any(k in d.lower() for k in ['exness', 'real', 'trial', 'demo', 'server']) or '-' in d:
+                    server = d
+                    break
+
+    if not login:
+        m = re.search(r'ReportHistory-(\d+)', os.path.basename(htm_path))
+        if m:
+            login = m.group(1)
+
+    if not server:
+        server = 'Exness-MT5'
+
+    return {'account': login or '463678568', 'server': server, 'platform': 'MT5'}
+
 def parse_mt5_html_content(content):
     daily = {}
     deals_idx = content.find('Transaksi')
@@ -81,6 +110,8 @@ def sync_trades():
         except Exception:
             pass
 
+    detected_accounts = []
+
     # Scan MT5 HTML Reports
     if os.path.exists(MT5_DOCS_DIR):
         for htm_path in glob.glob(os.path.join(MT5_DOCS_DIR, 'ReportHistory*.htm*')):
@@ -93,6 +124,10 @@ def sync_trades():
                 except UnicodeDecodeError:
                     continue
             if content:
+                acct_info = extract_account_from_html(content, htm_path)
+                if not any(a['account'] == acct_info['account'] for a in detected_accounts):
+                    detected_accounts.append(acct_info)
+
                 parsed = parse_mt5_html_content(content)
                 for date_key, dval in parsed.items():
                     if date_key not in trades:
@@ -128,11 +163,14 @@ def sync_trades():
         except Exception:
             pass
 
-    # Set metadata last updated
+    primary_acct = detected_accounts[0] if detected_accounts else {'account': '463678568', 'server': 'Exness-MT5Trial17', 'platform': 'MT5'}
+
+    # Set metadata last updated and detected accounts
     trades['_meta'] = {
         'last_updated': NOW_WIB.isoformat(),
-        'account': '463678568',
-        'server': 'Exness-MT5Trial17'
+        'account': primary_acct['account'],
+        'server': primary_acct['server'],
+        'accounts': detected_accounts if detected_accounts else [primary_acct]
     }
 
     # Save to local file
@@ -164,12 +202,13 @@ def sync_trades():
 
     active_days = len([k for k in trades.keys() if k != '_meta'])
     time_str = NOW_WIB.strftime('%d %b %Y, %H:%M WIB')
+    accts_str = ", ".join([f"{a['account']} ({a['server']})" for a in (detected_accounts or [primary_acct])])
 
     print("================================================================")
     print("  [✔] SINKRONISASI JURNAL TRADING SELESAI")
     print("================================================================")
     print(f"  • Waktu Update : {time_str}")
-    print(f"  • Akun MT5     : 463678568 (Exness)")
+    print(f"  • Akun MT5     : {accts_str}")
     print(f"  • Hari Aktif   : {active_days} hari transaksi")
     print(f"  • Web Online   : https://dferdiantnn.github.io/jurnal/")
     print(f"  • Server Lokal : Ketik 'jurnal serve' jika ingin buka offline")
