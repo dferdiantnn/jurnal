@@ -172,6 +172,7 @@ def sync_trades():
     print(f"  • Akun MT5     : 463678568 (Exness)")
     print(f"  • Hari Aktif   : {active_days} hari transaksi")
     print(f"  • Web Online   : https://dferdiantnn.github.io/jurnal/")
+    print(f"  • Server Lokal : Ketik 'jurnal serve' jika ingin buka offline")
     print("================================================================")
     print("  (Selesai dalam 0.3 detik. Laptop 100% adem, CPU 0%)")
     print("================================================================")
