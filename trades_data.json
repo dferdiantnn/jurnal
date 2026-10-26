@@ -5262,7 +5262,7 @@
     ]
   },
   "_meta": {
-    "last_updated": "2026-10-21T20:55:40.874139+07:00",
+    "last_updated": "2026-10-26T15:16:19.126020+07:00",
     "account": "463678568",
     "server": "Exness-MT5Trial17",
     "accounts": [
@@ -19431,6 +19431,18 @@
         "type": "SELL",
         "lot": 0.01,
         "profit": -2.27
+      }
+    ]
+  },
+  "2026-10-26": {
+    "pnl": -3.81,
+    "trades": [
+      {
+        "time": "07:15",
+        "symbol": "XAUUSD",
+        "type": "BUY",
+        "lot": 0.01,
+        "profit": -3.81
       }
     ]
   }
